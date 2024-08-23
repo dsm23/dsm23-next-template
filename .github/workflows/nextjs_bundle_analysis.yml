@@ -22,7 +22,6 @@ jobs:
       SKIP_ENV_VALIDATION: true
     runs-on: ubuntu-latest
     permissions:
-      issues: write
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
