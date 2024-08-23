@@ -1,5 +1,5 @@
-import type { Config } from "tailwindcss"
-import defaultTheme from "tailwindcss/defaultTheme"
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config = {
   darkMode: "class",
@@ -84,6 +84,6 @@ const config = {
   future: {
     hoverOnlyWhenSupported: true,
   },
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
