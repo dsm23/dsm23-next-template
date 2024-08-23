@@ -75,13 +75,13 @@ git clone https://github.com/<your_username)/next-enterprise.git
 2. Install the dependencies:
 
 ```bash
-yarn install --frozen-lockfile
+pnpm install --frozen-lockfile
 ```
 
 3. Run the development server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -118,7 +118,7 @@ The following scripts are available in the `package.json`:
 - `e2e:ui`: Runs end-to-end tests with UI
 - `format`: Formats the code with Prettier
 - `postinstall`: Applies patches to external dependencies
-- `preinstall`: Ensures the project is installed with Yarn
+- `preinstall`: Ensures the project is installed with pnpm
 - `coupling-graph`: **Generates a coupling and cohesion graph for the components**
 
 ## 🔗 Coupling Graph
@@ -126,7 +126,7 @@ The following scripts are available in the `package.json`:
 The `coupling-graph` script is a useful tool that helps visualize the coupling and connections between your project's internal modules. It's built using the [Madge](https://github.com/pahen/madge) library. To generate the graph, simply run the following command:
 
 ```bash
-yarn coupling-graph
+pnpm coupling-graph
 ```
 
 This will create a `graph.svg` file, which contains a graphical representation of the connections between your components. You can open the file with any SVG-compatible viewer.
@@ -139,9 +139,9 @@ This boilerplate comes with various testing setups to ensure your application's 
 
 ### Running Tests
 
-- **Unit and integration tests**: Run Jest tests using `yarn test`
-- **End-to-end tests (headless mode)**: Run Playwright tests in headless mode with `yarn e2e:headless`
-- **End-to-end tests (UI mode)**: Run Playwright tests with UI using `yarn e2e:ui`
+- **Unit and integration tests**: Run Jest tests using `pnpm test`
+- **End-to-end tests (headless mode)**: Run Playwright tests in headless mode with `pnpm e2e:headless`
+- **End-to-end tests (UI mode)**: Run Playwright tests with UI using `pnpm e2e:ui`
 
 <img width="1392" alt="image" src="https://user-images.githubusercontent.com/28964599/233666655-93b7d08b-2fd8-406a-b43c-44d4d96cf387.png">
 
@@ -183,7 +183,7 @@ export const FilledForm: Story = {
 
 ### Smoke Testing
 
-In this boilerplate, we use Storybook's out-of-the-box support for smoke testing to verify that components render correctly without any errors. Just run `yarn test-storybook` to perform smoke testing. Remember to write stories in JSX or TSX format only. Smoke testing and a lot of other functionalities dont work well with MDX stories.
+In this boilerplate, we use Storybook's out-of-the-box support for smoke testing to verify that components render correctly without any errors. Just run `pnpm test-storybook` to perform smoke testing. Remember to write stories in JSX or TSX format only. Smoke testing and a lot of other functionalities dont work well with MDX stories.
 
 ## 🎨 Styling and Design System
 
