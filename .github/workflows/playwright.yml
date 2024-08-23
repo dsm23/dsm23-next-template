@@ -14,16 +14,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo "node_version=$(cat .github/nodejs.version)" >> $GITHUB_ENV
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
       - name: "use node ${{ env.node_version }}"
         uses: actions/setup-node@v3
         with:
           node-version: "${{ env.node_version }}"
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
       - name: Install Playwright Browsers
-        run: yarn playwright install --with-deps
+        run: pnpm playwright install --with-deps
       - name: Run Playwright tests
-        run: yarn playwright test
+        run: pnpm playwright test
       - uses: actions/upload-artifact@v3
         if: always()
         with:
