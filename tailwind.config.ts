@@ -1,10 +1,7 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { pick, omit } = require("lodash")
-const colors = require("tailwindcss/colors")
-const defaultTheme = require("tailwindcss/defaultTheme")
+import type { Config } from "tailwindcss"
+import defaultTheme from "tailwindcss/defaultTheme"
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   darkMode: "class",
   content: [
     "./index.html",
@@ -87,4 +84,6 @@ module.exports = {
   future: {
     hoverOnlyWhenSupported: true,
   },
-}
+} satisfies Config
+
+export default config
