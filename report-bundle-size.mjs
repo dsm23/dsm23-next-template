@@ -7,13 +7,14 @@
 
 // edited to work with the appdir by @raphaelbadia
 
-const gzSize = require("gzip-size");
-const mkdirp = require("mkdirp");
-const fs = require("fs");
-const path = require("path");
+import { gzipSizeSync } from "gzip-size";
+import { mkdirp } from "mkdirp";
+import { readFile } from "fs/promises";
+import fs from "node:fs";
+import path from "node:path";
 
 // Pull options from `package.json`
-const options = getOptions();
+const options = await getOptions();
 const BUILD_OUTPUT_DIRECTORY = getBuildOutputDirectory(options);
 
 // first we check to make sure that the build output directory exists
@@ -28,10 +29,14 @@ try {
 }
 
 // if so, we can import the build manifest
-const buildMeta = require(path.join(nextMetaRoot, "build-manifest.json"));
-const appDirMeta = require(path.join(nextMetaRoot, "app-build-manifest.json"));
+const buildMeta = await readJsonFile(
+  path.join(nextMetaRoot, "build-manifest.json"),
+);
+const appDirMeta = await readJsonFile(
+  path.join(nextMetaRoot, "app-build-manifest.json"),
+);
 
-// this memory cache ensures we dont read any script file more than once
+// this memory cache ensures we don't read any script file more than once
 // bundles are often shared between pages
 const memoryCache = {};
 
@@ -80,7 +85,7 @@ const rawData = JSON.stringify({
   __global: globalAppDirBundleSizes,
 });
 
-// log ouputs to the gh actions panel
+// log outputs to the gh actions panel
 console.log(rawData);
 
 mkdirp.sync(path.join(nextMetaRoot, "analyze/"));
@@ -121,7 +126,7 @@ function getScriptSize(scriptPath) {
   } else {
     const textContent = fs.readFileSync(p, encoding);
     rawSize = Buffer.byteLength(textContent, encoding);
-    gzipSize = gzSize.sync(textContent);
+    gzipSize = gzipSizeSync(textContent);
     memoryCache[p] = [rawSize, gzipSize];
   }
 
@@ -131,10 +136,16 @@ function getScriptSize(scriptPath) {
 /**
  * Reads options from `package.json`
  */
-function getOptions(pathPrefix = process.cwd()) {
-  const pkg = require(path.join(pathPrefix, "package.json"));
+async function getOptions(pathPrefix = process.cwd()) {
+  const pkg = await readJsonFile(path.join(pathPrefix, "package.json"));
 
   return { ...pkg.nextBundleAnalysis, name: pkg.name };
+}
+
+async function readJsonFile(path) {
+  const file = await readFile(path, "utf8");
+
+  return JSON.parse(file);
 }
 
 /**
