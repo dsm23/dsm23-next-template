@@ -1,4 +1,5 @@
 name: Playwright Tests
+
 on:
   push:
     branches:
@@ -7,29 +8,47 @@ on:
       - develop
   pull_request: null
   workflow_dispatch: null
+
 jobs:
-  test:
+  playwright-tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3]
+        shardTotal: [3]
+    container:
+      image: mcr.microsoft.com/playwright:v1.46.1-jammy
     steps:
-      - uses: actions/checkout@v4
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+      - name: Git Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - run: echo "node_version=$(cat .github/nodejs.version)" >> $GITHUB_ENV
       - uses: pnpm/action-setup@v3
         with:
           version: 9
-      - name: "use node ${{ env.node_version }}"
-        uses: actions/setup-node@v3
+      - name: Use Node.js ${{ env.node-version }}
+        uses: actions/setup-node@v4
         with:
-          node-version: "${{ env.node_version }}"
+          node-version: ${{ env.node-version }}
+          cache: "pnpm"
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Install Playwright Browsers
-        run: pnpm playwright install --with-deps
       - name: Run Playwright tests
-        run: pnpm playwright test
-      - uses: actions/upload-artifact@v3
-        if: always()
+        run: pnpm e2e:headless --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+        env:
+          # Required for firefox
+          HOME: /root
+      - name: Upload playwright report to GitHub Actions Artifacts
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
+          name: playwright-report-${{ matrix.shardIndex }}
           path: playwright-report/
-          retention-days: 30
+          retention-days: 1
