@@ -17,13 +17,17 @@ defaults:
     working-directory: ./
 
 jobs:
-  analyze:
+  analyze-bundle:
     env:
       SKIP_ENV_VALIDATION: true
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v3
