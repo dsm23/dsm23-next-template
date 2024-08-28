@@ -1,4 +1,5 @@
 import { Inter as FontSans } from "next/font/google";
+import { ThemeProvider } from "~/components/ThemeProvider/ThemeProvider";
 import { cn } from "~/utils/classNames";
 
 import "~/styles/tailwind.css";
@@ -21,7 +22,14 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
