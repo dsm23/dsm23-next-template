@@ -35,13 +35,13 @@ export default function Web() {
               tools for a smooth and enjoyable development process.
             </p>
             <Button
-              href="https://github.com/Blazity/next-enterprise"
+              href="https://github.com/dsm23/dsm23-next-template"
               className="mr-3"
             >
               Get started
             </Button>
             <Button
-              href="https://vercel.com/new/git/external?repository-url=https://github.com/Blazity/next-enterprise"
+              href="https://vercel.com/new/git/external?repository-url=https://github.com/dsm23/dsm23-next-template/"
               intent="secondary"
             >
               Deploy Now
