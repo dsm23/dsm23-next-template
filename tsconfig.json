@@ -19,6 +19,12 @@
     "incremental": true,
     "baseUrl": ".",
     "types": ["node", "jest", "@testing-library/jest-dom"],
+    "paths": {
+      "~/app/*": ["app/*"],
+      "~/components/*": ["components/*"],
+      "~/styles/*": ["styles/*"],
+      "~/utils/*": ["utils/*"]
+    },
     "plugins": [
       {
         "name": "next"
