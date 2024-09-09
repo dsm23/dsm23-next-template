@@ -1,6 +1,6 @@
+import type { ButtonHTMLAttributes, FunctionComponent } from "react";
 import { cva } from "class-variance-authority";
 import type { VariantProps } from "class-variance-authority";
-import type { ButtonHTMLAttributes, FunctionComponent } from "react";
 import { cn } from "~/utils/classNames";
 
 const button = cva(
