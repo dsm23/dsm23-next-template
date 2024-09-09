@@ -6,12 +6,11 @@
  */
 
 // edited to work with the appdir by @raphaelbadia
-
-import { gzipSizeSync } from "gzip-size";
-import { mkdirp } from "mkdirp";
 import { readFile } from "fs/promises";
 import fs from "node:fs";
 import path from "node:path";
+import { gzipSizeSync } from "gzip-size";
+import { mkdirp } from "mkdirp";
 
 // Pull options from `package.json`
 const options = await getOptions();
