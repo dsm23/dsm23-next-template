@@ -19,7 +19,7 @@ jobs:
         shardIndex: [1, 2, 3]
         shardTotal: [3]
     container:
-      image: mcr.microsoft.com/playwright:v1.46.1-jammy
+      image: mcr.microsoft.com/playwright:v1.47.0-jammy
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@v2
