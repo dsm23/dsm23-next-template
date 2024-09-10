@@ -5,11 +5,12 @@ pull_request_rules:
       - author=dsm23
       - check-success=analyze-bundle
       - check-success=check
+      - check-success=chromatic
       - check-success=code-review
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success~=playwright-tests \(\d, \d\)
-      - "#check-success>=10"
+      - "#check-success>=11"
     actions:
       review:
         type: APPROVE
@@ -19,11 +20,12 @@ pull_request_rules:
       - author=dependabot[bot]
       - check-success=analyze-bundle
       - check-success=check
+      - check-success=chromatic
       - check-success=code-review
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success~=playwright-tests \(\d, \d\)
-      - "#check-success>=10"
+      - "#check-success>=11"
     actions:
       review:
         type: APPROVE
@@ -33,11 +35,12 @@ pull_request_rules:
     conditions:
       - check-success=analyze-bundle
       - check-success=check
+      - check-success=chromatic
       - check-success=code-review
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success~=playwright-tests \(\d, \d\)
-      - "#check-success>=10"
+      - "#check-success>=11"
       - "#approved-reviews-by>=1"
     actions:
       merge:
