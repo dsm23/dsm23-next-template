@@ -34,17 +34,18 @@ export default function Web() {
               development, AI-powered code reviews, and an extensive suite of
               tools for a smooth and enjoyable development process.
             </p>
-            <Button
-              href="https://github.com/dsm23/dsm23-next-template"
-              className="mr-3"
-            >
-              Get started
+            <Button asChild>
+              <a
+                href="https://github.com/dsm23/dsm23-next-template"
+                className="mr-3"
+              >
+                Get started
+              </a>
             </Button>
-            <Button
-              href="https://vercel.com/new/git/external?repository-url=https://github.com/dsm23/dsm23-next-template/"
-              intent="secondary"
-            >
-              Deploy Now
+            <Button variant="outline" asChild>
+              <a href="https://vercel.com/new/git/external?repository-url=https://github.com/dsm23/dsm23-next-template/">
+                Deploy Now
+              </a>
             </Button>
           </div>
         </div>
