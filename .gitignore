@@ -17,6 +17,10 @@ build
 .DS_Store
 *.pem
 
+# setting folder
+.vscode/settings.json
+.idea/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
