@@ -1,13 +1,18 @@
+import { fn } from "@storybook/test";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./Button";
+import { Button } from ".";
 
-const meta: Meta<typeof Button> = {
-  title: "Button",
+const meta = {
+  title: "Components/Shadcn/Button",
   component: Button,
+  parameters: {
+    layout: "centered",
+  },
   args: {
     variant: "default",
     children: "Button",
     size: "lg",
+    onClick: fn(),
   },
   argTypes: {
     variant: {
@@ -26,7 +31,8 @@ const meta: Meta<typeof Button> = {
       control: { type: "select" },
     },
   },
-};
+  tags: ["autodocs"],
+} satisfies Meta<typeof Button>;
 
 type Story = StoryObj<typeof Button>;
 

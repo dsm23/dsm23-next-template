@@ -1,5 +1,5 @@
 import { Inter as FontSans } from "next/font/google";
-import { ThemeProvider } from "~/components/ThemeProvider/ThemeProvider";
+import { ThemeProvider } from "~/components/theme-provider";
 import { cn } from "~/utils/classNames";
 
 import "~/styles/tailwind.css";
