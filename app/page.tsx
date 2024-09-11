@@ -63,9 +63,9 @@ export default function Web() {
                 <div className="bg-primary-100 dark:bg-primary-900 mb-4 flex size-10 items-center justify-center rounded-full p-1.5 text-blue-700 lg:size-12">
                   {singleItem.icon}
                 </div>
-                <h3 className="mb-2 text-xl font-bold dark:text-white">
+                <h2 className="mb-2 text-xl font-bold dark:text-white">
                   {singleItem.title}
-                </h3>
+                </h2>
                 <p className="text-gray-500 dark:text-gray-400">
                   {singleItem.description}
                 </p>
