@@ -5,3 +5,13 @@ test("has title", async ({ page }) => {
 
   await expect(page).toHaveTitle(/Next.js Enterprise Boilerplate/);
 });
+
+test("has heading", async ({ page }) => {
+  await page.goto("/");
+
+  await expect(
+    page.getByRole("heading", {
+      name: "Delete this",
+    }),
+  ).toBeVisible();
+});

@@ -21,7 +21,9 @@ export const metadata: Metadata = {
 
 export default function Web() {
   return (
-    <>
+    <main>
+      <h1 className="sr-only">Delete this</h1>
+
       <section className="bg-white dark:bg-gray-900">
         <div className="mx-auto grid max-w-screen-xl px-4 py-8 text-center lg:py-16">
           <div className="mx-auto place-self-center">
@@ -72,6 +74,6 @@ export default function Web() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
