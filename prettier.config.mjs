@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   plugins: [
     "prettier-plugin-tailwindcss",
     "@ianvs/prettier-plugin-sort-imports",
