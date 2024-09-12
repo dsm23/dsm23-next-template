@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
 /**
  * Copyright (c) HashiCorp, Inc.
  * SPDX-License-Identifier: MPL-2.0
@@ -20,7 +19,7 @@ const BUILD_OUTPUT_DIRECTORY = getBuildOutputDirectory(options);
 const nextMetaRoot = path.join(process.cwd(), BUILD_OUTPUT_DIRECTORY);
 try {
   fs.accessSync(nextMetaRoot, fs.constants.R_OK);
-} catch (err) {
+} catch {
   console.error(
     `No build output found at "${nextMetaRoot}" - you may not have your working directory set correctly, or not have run "next build".`,
   );
@@ -38,27 +37,6 @@ const appDirMeta = await readJsonFile(
 // this memory cache ensures we don't read any script file more than once
 // bundles are often shared between pages
 const memoryCache = {};
-
-// since _app is the template that all other pages are rendered into,
-// every page must load its scripts. we'll measure its size here
-const globalBundle = buildMeta.pages["/_app"];
-const globalBundleSizes = getScriptSizes(globalBundle);
-
-// next, we calculate the size of each page's scripts, after
-// subtracting out the global scripts
-const allPageSizes = Object.values(buildMeta.pages).reduce(
-  (acc, scriptPaths, i) => {
-    const pagePath = Object.keys(buildMeta.pages)[i];
-    const scriptSizes = getScriptSizes(
-      scriptPaths.filter((scriptPath) => !globalBundle.includes(scriptPath)),
-    );
-
-    acc[pagePath] = scriptSizes;
-
-    return acc;
-  },
-  {},
-);
 
 const globalAppDirBundle = buildMeta.rootMainFiles;
 const globalAppDirBundleSizes = getScriptSizes(globalAppDirBundle);
@@ -85,6 +63,7 @@ const rawData = JSON.stringify({
 });
 
 // log outputs to the gh actions panel
+// eslint-disable-next-line no-console
 console.log(rawData);
 
 mkdirp.sync(path.join(nextMetaRoot, "analyze/"));

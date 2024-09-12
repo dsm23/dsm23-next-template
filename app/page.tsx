@@ -60,7 +60,7 @@ export default function Web() {
                 key={singleItem.title}
                 className="flex flex-col items-center justify-center text-center"
               >
-                <div className="bg-primary-100 dark:bg-primary-900 mb-4 flex size-10 items-center justify-center rounded-full p-1.5 text-blue-700 lg:size-12">
+                <div className="mb-4 flex size-10 items-center justify-center rounded-full p-1.5 text-blue-700 lg:size-12">
                   {singleItem.icon}
                 </div>
                 <h2 className="mb-2 text-xl font-bold dark:text-white">
