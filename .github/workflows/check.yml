@@ -35,7 +35,9 @@ jobs:
       - name: Format check
         run: pnpm fmt.check
       - name: Unit & Integration tests
-        run: pnpm test
+        run: pnpm test -- --coverage
+      - name: Build
+        run: pnpm build
       - name: Smoke & Acceptance tests
         run: |
           pnpm build-storybook --quiet
