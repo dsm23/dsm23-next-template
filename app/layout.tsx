@@ -1,4 +1,5 @@
 import { Inter as FontSans } from "next/font/google";
+import { headers } from "next/headers";
 import { ThemeProvider } from "~/components/theme-provider";
 import { cn } from "~/utils/classNames";
 
@@ -14,6 +15,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const headersList = headers();
+  const nonce = headersList.get("x-nonce") ?? undefined;
+
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <body
@@ -27,6 +31,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          nonce={nonce}
         >
           {children}
         </ThemeProvider>
