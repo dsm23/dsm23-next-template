@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { fixupPluginRules, includeIgnoreFile } from "@eslint/compat";
 import js from "@eslint/js";
 import prettier from "eslint-config-prettier";
+import * as mdx from "eslint-plugin-mdx";
 import react from "eslint-plugin-react";
 import storybook from "eslint-plugin-storybook";
 import globals from "globals";
@@ -18,7 +19,7 @@ const gitignorePath = path.resolve(__dirname, ".gitignore");
 export default ts.config(
   includeIgnoreFile(gitignorePath),
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    files: ["**/*.{js,mjs,cjs,ts,md,mdx,jsx,tsx}"],
     languageOptions: {
       globals: globals.nodeBuiltin,
       parserOptions: {
@@ -130,4 +131,13 @@ export default ts.config(
       ],
     },
   },
+  {
+    // Configure.mdx
+    files: ["**/*.mdx"],
+    rules: {
+      "react/jsx-uses-vars": "error",
+      "tailwindcss/no-custom-classname": "off",
+    },
+  },
+  mdx.flat,
 );
