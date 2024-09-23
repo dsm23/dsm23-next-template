@@ -36,6 +36,11 @@ storybook-static
 .env.test.local
 .env.production.local
 
+# Cache Files
+.eslintmdcache
+.stylelintcache
+.prettiercache
+
 # playwright
 /test-results/
 /playwright-report/
