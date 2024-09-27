@@ -10,8 +10,7 @@
     "lint:js": "eslint \"**/*.{js,mjs,ts,tsx}\" --report-unused-disable-directives --max-warnings 0",
     "lint:md": "eslint \"**/*.md?(x)\" --report-unused-disable-directives --max-warnings 0 --cache --cache-strategy=content --cache-location=.eslintmdcache",
     "lint:css": "stylelint \"**/*.css\" --max-warnings 0 --allow-empty-input --cache --cache-strategy=content --cache-location=.stylelintcache",
-    "lint": "pnpm run lint:md && pnpm run lint:js && pnpm run lint:css",
-    "lint:fix": "next lint --fix",
+    "lint": "run-s lint:md lint:js lint:css",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "analyze": "cross-env ANALYZE=true pnpm build",
@@ -21,8 +20,8 @@
     "test": "cross-env FORCE_COLOR=1 jest --passWithNoTests",
     "e2e:headless": "playwright test",
     "e2e:ui": "playwright test --ui",
-    "preinstall": "pnpm dlx npm-only-allow@latest --PM pnpm",
-    "postinstall": "pnpm dlx patch-package -y",
+    "preinstall": "npm-only-allow --PM pnpm",
+    "postinstall": "patch-package -y",
     "coupling-graph": "pnpm dlx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
   },
   "dependencies": {
@@ -126,6 +125,7 @@
     "lint-staged": "^15.2.10",
     "mkdirp": "^3.0.1",
     "npm-only-allow": "^1.2.6",
+    "npm-run-all": "^4.1.5",
     "patch-package": "^8.0.0",
     "postcss": "^8.4.47",
     "postinstall-postinstall": "^2.1.0",
