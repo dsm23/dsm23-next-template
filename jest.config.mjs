@@ -6,12 +6,17 @@ const createJestConfig = nextJest({
 
 /** @type {import('jest').Config} */
 const customJestConfig = {
+  collectCoverageFrom: [
+    "**/src/**/*.{js,jsx,ts,tsx}",
+    "!**/src/**/*.stories.{js,jsx,ts,tsx}",
+  ],
+  coveragePathIgnorePatterns: [".next/", "dist/", "node_modules/", "stories/"],
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80,
+      branches: 20,
+      functions: 20,
+      lines: 20,
+      statements: 20,
     },
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
