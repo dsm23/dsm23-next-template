@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "prepare": "husky",
+    "prepare": "node .husky/install.mjs",
     "dev": "cross-env FORCE_COLOR=1 next dev",
     "build": "next build",
     "start": "next start",
