@@ -69,7 +69,7 @@ jobs:
       - name: Upload bundle
         uses: actions/upload-artifact@v4
         with:
-          name: bundle-ubuntu-latest
+          name: bundle
           path: .next/analyze/__bundle_analysis.json
 
       - name: Download base branch bundle stats
@@ -95,7 +95,7 @@ jobs:
       # entry in your package.json file.
       - name: Compare with base branch bundle
         if: success() && github.event.number
-        run: ls -laR .next/analyze/base && npx -p nextjs-bundle-analysis compare
+        run: ls -laR .next/analyze/base && pnpm --package=nextjs-bundle-analysis dlx compare
 
       - name: Get comment body
         id: get-comment-body
