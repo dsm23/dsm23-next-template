@@ -1,8 +1,10 @@
 export default {
   plugins: [
-    "prettier-plugin-tailwindcss",
+    "prettier-plugin-css-order",
     "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
   ],
+  cssDeclarationSorterOrder: "smacss",
   importOrder: [
     "^react$",
     "<TYPES>^(react)",
@@ -22,7 +24,6 @@ export default {
     "^(?!.*[.]css$)[./].*$",
     ".css$",
   ],
-  importOrderTypeScriptVersion: "5.6.2",
-  tailwindConfig: "./tailwind.config",
+  importOrderTypeScriptVersion: "5.6.3",
   tailwindFunctions: ["clsx", "cn", "cva", "cx"],
 };
