@@ -318,9 +318,12 @@ importers:
       prettier:
         specifier: 3.3.3
         version: 3.3.3
+      prettier-plugin-css-order:
+        specifier: ^2.1.2
+        version: 2.1.2(postcss@8.4.47)(prettier@3.3.3)
       prettier-plugin-tailwindcss:
         specifier: ^0.6.8
-        version: 0.6.8(@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3))(prettier@3.3.3)
+        version: 0.6.8(@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3))(prettier-plugin-css-order@2.1.2(postcss@8.4.47)(prettier@3.3.3))(prettier@3.3.3)
       semantic-release:
         specifier: ^24.1.2
         version: 24.1.2(typescript@5.6.3)
@@ -4362,6 +4365,12 @@ packages:
     resolution: {integrity: sha512-x8dy3RnvYdlUcPOjkEHqozhiwzKNSq7GcPuXFbnyMOCHxX8V3OgIg/pYuabl2sbUPfIJaeAQB7PMOK8DFIdoRA==}
     engines: {node: '>=12'}
 
+  css-declaration-sorter@7.2.0:
+    resolution: {integrity: sha512-h70rUM+3PNFuaBDTLe8wF/cdWu+dOZmb7pJt8Z2sedYbAcQVQV/tEchueg3GWxwqS0cxtbxmaHEdkNACqcvsow==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.0.9
+
   css-functions-list@3.2.3:
     resolution: {integrity: sha512-IQOkD3hbR5KrN93MtcYuad6YPuTSUhntLHDuLEbFWE+ff2/XSZNdZG+LcbbIW5AXKg/WFIfYItIzVoHngHXZzA==}
     engines: {node: '>=12 || >=16'}
@@ -7520,6 +7529,12 @@ packages:
     peerDependencies:
       postcss: ^8.4.21
 
+  postcss-less@6.0.0:
+    resolution: {integrity: sha512-FPX16mQLyEjLzEuuJtxA8X3ejDLNGGEG503d2YGZR5Ask1SpDN8KmZUMpzCvyalWRywAn1n1VOA5dcqfCLo5rg==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      postcss: ^8.3.5
+
   postcss-load-config@4.0.2:
     resolution: {integrity: sha512-bSVhyJGL00wMVoPUzAVAnbEoWyqRxkjv64tUl427SKnPrENtq6hJwUojroMz2VB+Q1edmi4IfrAPpami5VVgMQ==}
     engines: {node: '>= 14'}
@@ -7584,6 +7599,12 @@ packages:
     peerDependencies:
       postcss: ^8.4.31
 
+  postcss-scss@4.0.9:
+    resolution: {integrity: sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.4.29
+
   postcss-selector-parser@6.1.2:
     resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
@@ -7610,6 +7631,12 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+
+  prettier-plugin-css-order@2.1.2:
+    resolution: {integrity: sha512-vomxPjHI6pOMYcBuouSJHxxQClJXaUpU9rsV9IAO2wrSTZILRRlrxAAR8t9UF6wtczLkLfNRFUwM+ZbGXOONUA==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      prettier: 3.x
 
   prettier-plugin-tailwindcss@0.6.8:
     resolution: {integrity: sha512-dGu3kdm7SXPkiW4nzeWKCl3uoImdd5CTZEJGxyypEPL37Wj0HT2pLqjrvSei1nTeuQfO4PUfjeW5cTUNRLZ4sA==}
@@ -14195,6 +14222,10 @@ snapshots:
     dependencies:
       type-fest: 1.4.0
 
+  css-declaration-sorter@7.2.0(postcss@8.4.47):
+    dependencies:
+      postcss: 8.4.47
+
   css-functions-list@3.2.3: {}
 
   css-loader@6.11.0(webpack@5.95.0(@swc/core@1.7.18(@swc/helpers@0.5.13))(esbuild@0.23.1)):
@@ -18121,6 +18152,10 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.4.47
 
+  postcss-less@6.0.0(postcss@8.4.47):
+    dependencies:
+      postcss: 8.4.47
+
   postcss-load-config@4.0.2(postcss@8.4.47):
     dependencies:
       lilconfig: 3.1.2
@@ -18171,6 +18206,10 @@ snapshots:
     dependencies:
       postcss: 8.4.47
 
+  postcss-scss@4.0.9(postcss@8.4.47):
+    dependencies:
+      postcss: 8.4.47
+
   postcss-selector-parser@6.1.2:
     dependencies:
       cssesc: 3.0.0
@@ -18198,11 +18237,21 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-tailwindcss@0.6.8(@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3))(prettier@3.3.3):
+  prettier-plugin-css-order@2.1.2(postcss@8.4.47)(prettier@3.3.3):
+    dependencies:
+      css-declaration-sorter: 7.2.0(postcss@8.4.47)
+      postcss-less: 6.0.0(postcss@8.4.47)
+      postcss-scss: 4.0.9(postcss@8.4.47)
+      prettier: 3.3.3
+    transitivePeerDependencies:
+      - postcss
+
+  prettier-plugin-tailwindcss@0.6.8(@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3))(prettier-plugin-css-order@2.1.2(postcss@8.4.47)(prettier@3.3.3))(prettier@3.3.3):
     dependencies:
       prettier: 3.3.3
     optionalDependencies:
       '@ianvs/prettier-plugin-sort-imports': 4.3.1(prettier@3.3.3)
+      prettier-plugin-css-order: 2.1.2(postcss@8.4.47)(prettier@3.3.3)
 
   prettier@2.8.8:
     optional: true
