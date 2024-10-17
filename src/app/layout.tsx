@@ -1,3 +1,4 @@
+import type { FunctionComponent, PropsWithChildren } from "react";
 import { Inter as FontSans } from "next/font/google";
 import { headers } from "next/headers";
 import { ThemeProvider } from "src/components/theme-provider";
@@ -10,12 +11,10 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-export default function RootLayout({
+const RootLayout: FunctionComponent<PropsWithChildren> = async ({
   children,
-}: {
-  children: React.ReactNode;
-}) {
-  const headersList = headers();
+}) => {
+  const headersList = await headers();
   const nonce = headersList.get("x-nonce") ?? undefined;
 
   return (
@@ -38,4 +37,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
