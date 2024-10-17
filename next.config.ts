@@ -1,11 +1,8 @@
 import withBundleAnalyzer from "@next/bundle-analyzer";
-import withPlugins from "next-compose-plugins";
-import { env } from "./env.mjs";
+import type { NextConfig } from "next";
+import { env } from "./env";
 
-/**
- * @type {import('next').NextConfig}
- */
-const config = withPlugins([[withBundleAnalyzer({ enabled: env.ANALYZE })]], {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   logging: {
     fetches: {
@@ -17,15 +14,22 @@ const config = withPlugins([[withBundleAnalyzer({ enabled: env.ANALYZE })]], {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  experimental: { instrumentationHook: true },
-  rewrites() {
-    return [
+  async rewrites() {
+    return await [
       { source: "/healthz", destination: "/api/health" },
       { source: "/api/healthz", destination: "/api/health" },
       { source: "/health", destination: "/api/health" },
       { source: "/ping", destination: "/api/health" },
     ];
   },
-});
+};
 
-export default config;
+export default () => {
+  const plugins = [withBundleAnalyzer({ enabled: env.ANALYZE })];
+
+  const config = plugins.reduce((acc, next) => next(acc), {
+    ...nextConfig,
+  });
+
+  return config;
+};

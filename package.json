@@ -2,9 +2,10 @@
   "name": "dsm23-next-template",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "prepare": "node .husky/install.mjs",
-    "dev": "cross-env FORCE_COLOR=1 next dev",
+    "dev": "cross-env FORCE_COLOR=1 next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint:js": "eslint \"**/*.{js,mjs,ts,tsx}\" --report-unused-disable-directives --max-warnings 0",
@@ -25,7 +26,7 @@
     "coupling-graph": "pnpm dlx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "^14.2.15",
+    "@next/bundle-analyzer": "15.0.0-rc.1",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.2",
@@ -54,11 +55,10 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lodash": "^4.17.21",
-    "next": "^14.2.15",
-    "next-compose-plugins": "^2.2.1",
+    "next": "15.0.0-rc.1",
     "next-themes": "^0.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "19.0.0-rc-cd22717c-20241013",
+    "react-dom": "19.0.0-rc-cd22717c-20241013",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
@@ -97,8 +97,8 @@
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.13",
     "@types/node": "^22.7.6",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@typescript-eslint/eslint-plugin": "^8.9.0",
     "@typescript-eslint/parser": "^8.9.0",
     "all-contributors-cli": "^6.26.1",
@@ -107,7 +107,7 @@
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "9.12.0",
-    "eslint-config-next": "14.2.15",
+    "eslint-config-next": "15.0.0-rc.1",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.31.0",
@@ -142,11 +142,16 @@
     "ts-jest": "^29.2.5",
     "tsc": "^2.0.4",
     "typescript": "5.6.3",
-    "typescript-eslint": "^8.9.0",
-    "webpack": "5.95.0"
+    "typescript-eslint": "^8.9.0"
   },
   "engines": {
     "node": ">=20.0.0"
   },
-  "packageManager": "pnpm@9.10.0"
+  "packageManager": "pnpm@9.10.0",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "npm:types-react@19.0.0-rc.1",
+      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    }
+  }
 }
