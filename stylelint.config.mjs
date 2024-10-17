@@ -35,6 +35,8 @@ export default {
     "selector-id-pattern": ONLY_ALLOW_KEBAB_CASE_SELECTORS,
     // Allow Tailwind-based CSS Rules
     "at-rule-no-unknown": [true, { ignoreAtRules: CUSTOM_AT_RULES }],
+    // Ignore Tailwind's theme and screen functions
+    "function-no-unknown": [true, { ignoreFunctions: ["theme", "screen"] }],
     // Allow the Global CSS Selector
     "selector-pseudo-class-no-unknown": [
       true,
