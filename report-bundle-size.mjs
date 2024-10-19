@@ -63,7 +63,6 @@ const rawData = JSON.stringify({
 });
 
 // log outputs to the gh actions panel
-// eslint-disable-next-line no-console
 console.log(rawData);
 
 mkdirp.sync(path.join(nextMetaRoot, "analyze/"));
