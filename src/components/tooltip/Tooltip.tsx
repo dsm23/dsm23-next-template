@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import type { ReactElement } from "react";
 import * as RadixTooltip from "@radix-ui/react-tooltip";
-import { cva, VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
+import type { VariantProps } from "class-variance-authority";
 
 const tooltipContent = cva([], {
   variants: {
@@ -38,8 +39,8 @@ const tooltipArrow = cva([], {
 export interface TooltipProps
   extends VariantProps<typeof tooltipContent>,
     RadixTooltip.TooltipProps {
-  explainer: React.ReactElement | string;
-  children: React.ReactElement;
+  explainer: ReactElement | string;
+  children: ReactElement;
   className?: string;
   withArrow?: boolean;
   side?: "top" | "right" | "bottom" | "left";

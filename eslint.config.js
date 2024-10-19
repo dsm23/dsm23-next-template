@@ -114,11 +114,40 @@ export default ts.config(
     },
   },
   {
-    files: ["!**/{app, components}/**"],
+    files: ["!**/src/**", "**/src/stories/**"],
     ...ts.configs.disableTypeChecked,
   },
   {
+    files: ["**/src/**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     rules: {
+      "@typescript-eslint/consistent-type-definitions": "off",
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        {
+          prefer: "type-imports",
+        },
+      ],
+
+      "@typescript-eslint/restrict-template-expressions": [
+        "error",
+        {
+          allowNumber: true,
+          allowBoolean: true,
+        },
+      ],
+      "@typescript-eslint/no-confusing-void-expression": "off",
+      "@typescript-eslint/no-misused-promises": [
+        "error",
+        {
+          checksVoidReturn: false,
+        },
+      ],
+      "@typescript-eslint/triple-slash-reference": [
+        "error",
+        {
+          types: "prefer-import",
+        },
+      ],
       "no-console": [
         "error",
         {
