@@ -20,10 +20,7 @@
     "baseUrl": ".",
     "types": ["node", "jest", "@testing-library/jest-dom"],
     "paths": {
-      "~/app/*": ["src/app/*"],
-      "~/components/*": ["src/components/*"],
-      "~/styles/*": ["src/styles/*"],
-      "~/utils/*": ["src/utils/*"]
+      "~/*": ["src/*"]
     },
     "plugins": [
       {

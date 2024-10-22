@@ -1,8 +1,8 @@
 import type { FunctionComponent, PropsWithChildren } from "react";
 import { Inter as FontSans } from "next/font/google";
 import { headers } from "next/headers";
-import { ThemeProvider } from "src/components/theme-provider";
-import { cn } from "src/utils/classNames";
+import { ThemeProvider } from "~/components/theme-provider";
+import { cn } from "~/utils/classNames";
 
 import "~/styles/tailwind.css";
 
