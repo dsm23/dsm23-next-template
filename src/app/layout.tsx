@@ -2,6 +2,7 @@ import type { FunctionComponent, PropsWithChildren } from "react";
 import { Inter as FontSans } from "next/font/google";
 import { headers } from "next/headers";
 import { ThemeProvider } from "~/components/theme-provider";
+import { ThemeSwitcher } from "~/components/theme-switcher";
 import { cn } from "~/utils/classNames";
 
 import "~/styles/tailwind.css";
@@ -33,6 +34,9 @@ const RootLayout: FunctionComponent<PropsWithChildren> = async ({
           nonce={nonce}
         >
           {children}
+          <footer className="mx-auto flex w-full items-center justify-center border-t py-16 text-center text-xs">
+            <ThemeSwitcher />
+          </footer>
         </ThemeProvider>
       </body>
     </html>
