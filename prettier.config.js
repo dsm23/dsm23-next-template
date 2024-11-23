@@ -24,6 +24,6 @@ export default {
     "^(?!.*[.]css$)[./].*$",
     ".css$",
   ],
-  importOrderTypeScriptVersion: "5.6.3",
+  importOrderTypeScriptVersion: "5.7.2",
   tailwindFunctions: ["clsx", "cn", "cva", "cx"],
 };
