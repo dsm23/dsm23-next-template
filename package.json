@@ -26,7 +26,7 @@
     "coupling-graph": "pnpm dlx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
   },
   "dependencies": {
-    "@next/bundle-analyzer": "15.0.3",
+    "@next/bundle-analyzer": "15.0.4",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.2",
@@ -56,9 +56,9 @@
     "clsx": "^2.1.1",
     "lodash": "^4.17.21",
     "lucide-react": "^0.468.0",
-    "next": "15.0.3",
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "next": "15.0.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
@@ -83,23 +83,23 @@
     "@opentelemetry/sdk-trace-node": "1.29.0",
     "@opentelemetry/semantic-conventions": "1.28.0",
     "@playwright/test": "^1.49.0",
-    "@storybook/addon-essentials": "^8.4.6",
-    "@storybook/addon-interactions": "^8.4.6",
-    "@storybook/addon-links": "^8.4.6",
-    "@storybook/blocks": "^8.4.6",
-    "@storybook/nextjs": "^8.4.6",
-    "@storybook/react": "^8.4.6",
-    "@storybook/test": "^8.4.6",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/nextjs": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/test": "^8.4.7",
     "@storybook/test-runner": "^0.20.1",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.0.1",
+    "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.1",
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "@typescript-eslint/eslint-plugin": "^8.17.0",
     "@typescript-eslint/parser": "^8.17.0",
     "all-contributors-cli": "^6.26.1",
@@ -108,13 +108,13 @@
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "9.16.0",
-    "eslint-config-next": "15.0.3",
+    "eslint-config-next": "15.0.4",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-mdx": "^3.1.5",
     "eslint-plugin-react": "7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-storybook": "^0.11.1",
     "eslint-plugin-tailwindcss": "^3.17.5",
     "fetch-mock": "^12.2.0",
@@ -134,7 +134,7 @@
     "prettier-plugin-css-order": "^2.1.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "semantic-release": "^24.2.0",
-    "storybook": "^8.4.6",
+    "storybook": "^8.4.7",
     "stylelint": "^16.11.0",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-order": "^6.0.4",
@@ -148,11 +148,5 @@
   "engines": {
     "node": ">=22.0.0"
   },
-  "packageManager": "pnpm@9.14.4",
-  "pnpm": {
-    "overrides": {
-      "@types/react": "npm:types-react@19.0.0-rc.1",
-      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
-    }
-  }
+  "packageManager": "pnpm@9.14.4"
 }
