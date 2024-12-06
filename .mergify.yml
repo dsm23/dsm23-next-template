@@ -3,14 +3,16 @@ pull_request_rules:
   - name: automatic approval
     conditions:
       - author=dsm23
+      - check-success=analyze-bundle
       - check-success=check
+      - check-success=chromatic
       - check-success=code-review
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success=gitleaks
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=snyk
-      - "#check-success>=17"
+      - "#check-success>=19"
     actions:
       review:
         type: APPROVE
@@ -18,29 +20,33 @@ pull_request_rules:
   - name: automatic approval for Renovate pull requests
     conditions:
       - author=renovate[bot]
+      - check-success=analyze-bundle
       - check-success=check
+      - check-success=chromatic
       - check-success=code-review
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success=gitleaks
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=snyk
-      - "#check-success>=17"
+      - "#check-success>=19"
     actions:
       review:
         type: APPROVE
-        message: Automatically approving dependabot
+        message: Automatically approving renovate
   # merge
   - name: Automatically merge when GitHub Actions jobs succeed
     conditions:
+      - check-success=analyze-bundle
       - check-success=check
+      - check-success=chromatic
       - check-success=code-review
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success=gitleaks
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=snyk
-      - "#check-success>=17"
+      - "#check-success>=19"
       - "#approved-reviews-by>=1"
     actions:
       merge:
