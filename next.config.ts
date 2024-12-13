@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  output: "standalone",
   async rewrites() {
     return await [
       { source: "/healthz", destination: "/api/health" },
