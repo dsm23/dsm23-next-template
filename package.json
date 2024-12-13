@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prepare": "node .husky/install.mjs",
+    "prepare": "node .husky/install.js",
     "dev": "cross-env FORCE_COLOR=1 next dev --turbopack",
     "build": "next build",
     "start": "next start",
