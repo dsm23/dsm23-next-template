@@ -64,22 +64,22 @@ importers:
         version: 1.1.6(@types/react-dom@19.0.2(@types/react@19.0.2))(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@semantic-release/changelog':
         specifier: ^6.0.3
-        version: 6.0.3(semantic-release@24.2.0(typescript@5.7.2))
+        version: 6.0.3(semantic-release@24.2.1(typescript@5.7.2))
       '@semantic-release/commit-analyzer':
-        specifier: 13.0.0
-        version: 13.0.0(semantic-release@24.2.0(typescript@5.7.2))
+        specifier: 13.0.1
+        version: 13.0.1(semantic-release@24.2.1(typescript@5.7.2))
       '@semantic-release/git':
         specifier: ^10.0.1
-        version: 10.0.1(semantic-release@24.2.0(typescript@5.7.2))
+        version: 10.0.1(semantic-release@24.2.1(typescript@5.7.2))
       '@semantic-release/github':
         specifier: ^11.0.1
-        version: 11.0.1(semantic-release@24.2.0(typescript@5.7.2))
+        version: 11.0.1(semantic-release@24.2.1(typescript@5.7.2))
       '@semantic-release/npm':
         specifier: ^12.0.1
-        version: 12.0.1(semantic-release@24.2.0(typescript@5.7.2))
+        version: 12.0.1(semantic-release@24.2.1(typescript@5.7.2))
       '@semantic-release/release-notes-generator':
         specifier: ^14.0.1
-        version: 14.0.2(semantic-release@24.2.0(typescript@5.7.2))
+        version: 14.0.3(semantic-release@24.2.1(typescript@5.7.2))
       '@t3-oss/env-nextjs':
         specifier: ^0.11.1
         version: 0.11.1(typescript@5.7.2)(zod@3.24.1)
@@ -188,7 +188,7 @@ importers:
         version: 8.4.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(prettier@3.4.2))
       '@storybook/nextjs':
         specifier: ^8.4.7
-        version: 8.4.7(@swc/core@1.9.3(@swc/helpers@0.5.15))(babel-plugin-macros@3.1.0)(esbuild@0.24.0)(next@15.1.3(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(prettier@3.4.2))(type-fest@4.30.2)(typescript@5.7.2)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0))
+        version: 8.4.7(@swc/core@1.9.3(@swc/helpers@0.5.15))(babel-plugin-macros@3.1.0)(esbuild@0.24.0)(next@15.1.3(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(prettier@3.4.2))(type-fest@4.31.0)(typescript@5.7.2)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0))
       '@storybook/react':
         specifier: ^8.4.7
         version: 8.4.7(@storybook/test@8.4.7(storybook@8.4.7(prettier@3.4.2)))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(prettier@3.4.2))(typescript@5.7.2)
@@ -326,7 +326,7 @@ importers:
         version: 0.6.9(@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.4.2))(prettier-plugin-css-order@2.1.2(postcss@8.4.49)(prettier@3.4.2))(prettier@3.4.2)
       semantic-release:
         specifier: ^24.2.0
-        version: 24.2.0(typescript@5.7.2)
+        version: 24.2.1(typescript@5.7.2)
       storybook:
         specifier: ^8.4.7
         version: 8.4.7(prettier@3.4.2)
@@ -3067,8 +3067,8 @@ packages:
     peerDependencies:
       semantic-release: '>=18.0.0'
 
-  '@semantic-release/commit-analyzer@13.0.0':
-    resolution: {integrity: sha512-KtXWczvTAB1ZFZ6B4O+w8HkfYm/OgQb1dUGNFZtDgQ0csggrmkq8sTxhd+lwGF8kMb59/RnG9o4Tn7M/I8dQ9Q==}
+  '@semantic-release/commit-analyzer@13.0.1':
+    resolution: {integrity: sha512-wdnBPHKkr9HhNhXOhZD5a2LNl91+hs8CC2vsAVYxtZH3y0dV3wKn+uZSN61rdJQZ8EGxzWB3inWocBHV9+u/CQ==}
     engines: {node: '>=20.8.1'}
     peerDependencies:
       semantic-release: '>=20.1.0'
@@ -3099,8 +3099,8 @@ packages:
     peerDependencies:
       semantic-release: '>=20.1.0'
 
-  '@semantic-release/release-notes-generator@14.0.2':
-    resolution: {integrity: sha512-ur2l2tVLBfX3fSEO2rCy2X6Kzg5S7BHGqdwTHvJrpWp4mOEN7W4K/2kWAjvfAlwMenEKjMnDIhBbxxjnP0S9hw==}
+  '@semantic-release/release-notes-generator@14.0.3':
+    resolution: {integrity: sha512-XxAZRPWGwO5JwJtS83bRdoIhCiYIx8Vhr+u231pQAsdFIAbm19rSVJLdnBN+Avvk7CKvNQE/nJ4y7uqKH6WTiw==}
     engines: {node: '>=20.8.1'}
     peerDependencies:
       semantic-release: '>=20.1.0'
@@ -5495,8 +5495,8 @@ packages:
     resolution: {integrity: sha512-gdhefCCNy/8tpH/2+ajP9IQc14vXchNdd0weyzSJEFURhRMGncQ+zKFxwjAufIewPEJm9BPOaJnvg2UtlH2gPQ==}
     engines: {node: ^18.19.0 || >=20.5.0}
 
-  execa@9.5.1:
-    resolution: {integrity: sha512-QY5PPtSonnGwhhHDNI7+3RvY285c7iuJFFB+lU+oEzMY/gEGJ808owqJsrr8Otd1E/x07po1LkUBmdAc5duPAg==}
+  execa@9.5.2:
+    resolution: {integrity: sha512-EHlpxMCpHWSAh1dgS6bVeoLAXGnJNdR93aabr4QCGbzOM73o5XmRfM/e5FUqsw3aagP8S8XEWUWFAxnRBnAF0Q==}
     engines: {node: ^18.19.0 || >=20.5.0}
 
   exit@0.1.2:
@@ -6008,8 +6008,8 @@ packages:
     resolution: {integrity: sha512-puUZAUKT5m8Zzvs72XWy3HtvVbTWljRE66cP60bxJzAqf2DgICo7lYTY2IHUmLnNpjYvw5bvmoHvPc0QO2a62w==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
-  hosted-git-info@8.0.0:
-    resolution: {integrity: sha512-4nw3vOVR+vHUOT8+U4giwe2tcGv+R3pwwRidUe67DoMBTjhrfr6rZYJVVwdkBE+Um050SG+X9tf0Jo4fOpn01w==}
+  hosted-git-info@8.0.2:
+    resolution: {integrity: sha512-sYKnA7eGln5ov8T8gnYlkSOxFJvywzEx9BueN6xo/GKO8PGiI6uK6xx+DIGe45T3bdVjLAQDQW1aicT8z8JwQg==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
   html-encoding-sniffer@3.0.0:
@@ -6119,9 +6119,9 @@ packages:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
 
-  import-from-esm@1.3.4:
-    resolution: {integrity: sha512-7EyUlPFC0HOlBDpUFGfYstsU7XHxZJKAAMzCT8wZ0hMW7b+hG51LIKTDcsgtz8Pu6YC0HqRVbX+rVUtsGMUKvg==}
-    engines: {node: '>=16.20'}
+  import-from-esm@2.0.0:
+    resolution: {integrity: sha512-YVt14UZCgsX1vZQ3gKjkWVdBdHQ6eu3MPU1TBgL1H5orXe2+jWD006WCPPtOuwlQm10NuzOW5WawiF1Q9veW8g==}
+    engines: {node: '>=18.20'}
 
   import-in-the-middle@1.11.3:
     resolution: {integrity: sha512-tNpKEb4AjZrCyrxi+Eyu43h5ig0O8ZRFSXPHh/00/o+4P4pKzVEW/m5lsVtsAT7fCIgmQOAPjdqecGDsBXRxsw==}
@@ -6461,8 +6461,8 @@ packages:
     resolution: {integrity: sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==}
     engines: {node: '>=10'}
 
-  is-unicode-supported@2.0.0:
-    resolution: {integrity: sha512-FRdAyx5lusK1iHG0TWpVtk9+1i+GjrzRffhDg4ovQ7mcidMQ6mj+MhKPmvh7Xwyv5gIS06ns49CA7Sqg7lC22Q==}
+  is-unicode-supported@2.1.0:
+    resolution: {integrity: sha512-mE00Gnza5EEB3Ds0HfMyllZzbBrmLOX3vfWoj9A9PEnTfratQ/BcaJOuMhnkhjXvb2+FkY3VuHqtAGpTPmglFQ==}
     engines: {node: '>=18'}
 
   is-utf8@0.2.1:
@@ -7368,8 +7368,8 @@ packages:
   node-abort-controller@3.1.1:
     resolution: {integrity: sha512-AGK2yQKIjRuqnc6VkX2Xj5d+QW8xZ87pa1UK6yA6ouUyuxfHuMP6umE5QK7UmTeOAymo+Zx1Fxiuw9rVx8taHQ==}
 
-  node-emoji@2.1.3:
-    resolution: {integrity: sha512-E2WEOVsgs7O16zsURJ/eH8BqhF029wGpEOnv7Urwdo2wmQanOACwJQh0devF9D9RhoZru0+9JXIS0dBXIAz+lA==}
+  node-emoji@2.2.0:
+    resolution: {integrity: sha512-Z3lTE9pLaJF47NyMhd4ww1yFTAP8YhYI8SleJiHzM46Fgpm5cnNzSl9XfzFNqbaz+VlJrIj3fXQ4DeN1Rjm6cw==}
     engines: {node: '>=18'}
 
   node-fetch@2.7.0:
@@ -8114,6 +8114,10 @@ packages:
     resolution: {integrity: sha512-o1piW0n3tgKIKCwk2vpM/vOV13zjJzvP37Ioze54YlTHE06m4tjEbzg9WsKkvTuyYln2DHjo5pY4qrZGI0otpw==}
     engines: {node: '>=18'}
 
+  pretty-ms@9.2.0:
+    resolution: {integrity: sha512-4yf0QO/sllf/1zbZWYnvWw3NxCQwLXKzIj0G849LSufP15BXKM0rbD2Z3wVnkMfjdn/CB0Dpp444gYAACdsplg==}
+    engines: {node: '>=18'}
+
   proc-log@4.2.0:
     resolution: {integrity: sha512-g8+OnU/L2v+wyiVK+D5fA34J7EH8jZ8DDlvwhRCMxmMj7UCBvxiO1mGeN+36JXIKF4zevU4kRBd8lVgG9vLelA==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -8575,8 +8579,8 @@ packages:
     resolution: {integrity: sha512-L0jRsrPpjdckP3oPug3/VxNKt2trR8TcabrM6FOAAlvC/9Phcmm+cuAgTlxBqdBR1WJx7Naj9WHw+aOmheSVbw==}
     engines: {node: '>= 12.13.0'}
 
-  semantic-release@24.2.0:
-    resolution: {integrity: sha512-fQfn6e/aYToRtVJYKqneFM1Rg3KP2gh3wSWtpYsLlz6uaPKlISrTzvYAFn+mYWo07F0X1Cz5ucU89AVE8X1mbg==}
+  semantic-release@24.2.1:
+    resolution: {integrity: sha512-z0/3cutKNkLQ4Oy0HTi3lubnjTsdjjgOqmxdPjeYWe6lhFqUPfwslZxRHv3HDZlN4MhnZitb9SLihDkZNxOXfQ==}
     engines: {node: '>=20.8.1'}
     hasBin: true
 
@@ -9244,6 +9248,10 @@ packages:
 
   type-fest@4.30.2:
     resolution: {integrity: sha512-UJShLPYi1aWqCdq9HycOL/gwsuqda1OISdBO3t8RlXQC4QvtuIz4b5FCfe2dQIWEpmlRExKmcTBfP1r9bhY7ig==}
+    engines: {node: '>=16'}
+
+  type-fest@4.31.0:
+    resolution: {integrity: sha512-yCxltHW07Nkhv/1F6wWBr8kz+5BGMfP+RbRSYFnegVb0qV/UMT0G0ElBloPVerqn4M2ZV80Ir1FtCcYv1cT6vQ==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.2:
@@ -12378,7 +12386,7 @@ snapshots:
     dependencies:
       playwright: 1.49.1
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.14.2)(type-fest@4.30.2)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0))':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.15(react-refresh@0.14.2)(type-fest@4.31.0)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0))':
     dependencies:
       ansi-html: 0.0.9
       core-js-pure: 3.39.0
@@ -12390,7 +12398,7 @@ snapshots:
       source-map: 0.7.4
       webpack: 5.97.1(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0)
     optionalDependencies:
-      type-fest: 4.30.2
+      type-fest: 4.31.0
       webpack-hot-middleware: 2.26.1
 
   '@pnpm/config.env-replace@1.1.0': {}
@@ -12966,25 +12974,25 @@ snapshots:
 
   '@sec-ant/readable-stream@0.4.1': {}
 
-  '@semantic-release/changelog@6.0.3(semantic-release@24.2.0(typescript@5.7.2))':
+  '@semantic-release/changelog@6.0.3(semantic-release@24.2.1(typescript@5.7.2))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
       fs-extra: 11.2.0
       lodash: 4.17.21
-      semantic-release: 24.2.0(typescript@5.7.2)
+      semantic-release: 24.2.1(typescript@5.7.2)
 
-  '@semantic-release/commit-analyzer@13.0.0(semantic-release@24.2.0(typescript@5.7.2))':
+  '@semantic-release/commit-analyzer@13.0.1(semantic-release@24.2.1(typescript@5.7.2))':
     dependencies:
       conventional-changelog-angular: 8.0.0
       conventional-changelog-writer: 8.0.0
       conventional-commits-filter: 5.0.0
       conventional-commits-parser: 6.0.0
-      debug: 4.3.6
-      import-from-esm: 1.3.4
+      debug: 4.4.0
+      import-from-esm: 2.0.0
       lodash-es: 4.17.21
       micromatch: 4.0.8
-      semantic-release: 24.2.0(typescript@5.7.2)
+      semantic-release: 24.2.1(typescript@5.7.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -12992,7 +13000,7 @@ snapshots:
 
   '@semantic-release/error@4.0.0': {}
 
-  '@semantic-release/git@10.0.1(semantic-release@24.2.0(typescript@5.7.2))':
+  '@semantic-release/git@10.0.1(semantic-release@24.2.1(typescript@5.7.2))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
@@ -13002,11 +13010,11 @@ snapshots:
       lodash: 4.17.21
       micromatch: 4.0.7
       p-reduce: 2.1.0
-      semantic-release: 24.2.0(typescript@5.7.2)
+      semantic-release: 24.2.1(typescript@5.7.2)
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@11.0.1(semantic-release@24.2.0(typescript@5.7.2))':
+  '@semantic-release/github@11.0.1(semantic-release@24.2.1(typescript@5.7.2))':
     dependencies:
       '@octokit/core': 6.1.2
       '@octokit/plugin-paginate-rest': 11.3.5(@octokit/core@6.1.2)
@@ -13023,12 +13031,12 @@ snapshots:
       lodash-es: 4.17.21
       mime: 4.0.4
       p-filter: 4.1.0
-      semantic-release: 24.2.0(typescript@5.7.2)
+      semantic-release: 24.2.1(typescript@5.7.2)
       url-join: 5.0.0
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/npm@12.0.1(semantic-release@24.2.0(typescript@5.7.2))':
+  '@semantic-release/npm@12.0.1(semantic-release@24.2.1(typescript@5.7.2))':
     dependencies:
       '@semantic-release/error': 4.0.0
       aggregate-error: 5.0.0
@@ -13041,11 +13049,11 @@ snapshots:
       rc: 1.2.8
       read-pkg: 9.0.1
       registry-auth-token: 5.0.2
-      semantic-release: 24.2.0(typescript@5.7.2)
+      semantic-release: 24.2.1(typescript@5.7.2)
       semver: 7.6.3
       tempy: 3.1.0
 
-  '@semantic-release/release-notes-generator@14.0.2(semantic-release@24.2.0(typescript@5.7.2))':
+  '@semantic-release/release-notes-generator@14.0.3(semantic-release@24.2.1(typescript@5.7.2))':
     dependencies:
       conventional-changelog-angular: 8.0.0
       conventional-changelog-writer: 8.0.0
@@ -13053,11 +13061,11 @@ snapshots:
       conventional-commits-parser: 6.0.0
       debug: 4.4.0
       get-stream: 7.0.1
-      import-from-esm: 1.3.4
+      import-from-esm: 2.0.0
       into-stream: 7.0.0
       lodash-es: 4.17.21
       read-package-up: 11.0.0
-      semantic-release: 24.2.0(typescript@5.7.2)
+      semantic-release: 24.2.1(typescript@5.7.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -13303,7 +13311,7 @@ snapshots:
     dependencies:
       storybook: 8.4.7(prettier@3.4.2)
 
-  '@storybook/nextjs@8.4.7(@swc/core@1.9.3(@swc/helpers@0.5.15))(babel-plugin-macros@3.1.0)(esbuild@0.24.0)(next@15.1.3(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(prettier@3.4.2))(type-fest@4.30.2)(typescript@5.7.2)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0))':
+  '@storybook/nextjs@8.4.7(@swc/core@1.9.3(@swc/helpers@0.5.15))(babel-plugin-macros@3.1.0)(esbuild@0.24.0)(next@15.1.3(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(babel-plugin-macros@3.1.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(prettier@3.4.2))(type-fest@4.31.0)(typescript@5.7.2)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-syntax-bigint': 7.8.3(@babel/core@7.26.0)
@@ -13318,7 +13326,7 @@ snapshots:
       '@babel/preset-react': 7.26.3(@babel/core@7.26.0)
       '@babel/preset-typescript': 7.26.0(@babel/core@7.26.0)
       '@babel/runtime': 7.26.0
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@4.30.2)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0))
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.15(react-refresh@0.14.2)(type-fest@4.31.0)(webpack-hot-middleware@2.26.1)(webpack@5.97.1(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0))
       '@storybook/builder-webpack5': 8.4.7(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0)(storybook@8.4.7(prettier@3.4.2))(typescript@5.7.2)
       '@storybook/preset-react-webpack': 8.4.7(@storybook/test@8.4.7(storybook@8.4.7(prettier@3.4.2)))(@swc/core@1.9.3(@swc/helpers@0.5.15))(esbuild@0.24.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(prettier@3.4.2))(typescript@5.7.2)
       '@storybook/react': 8.4.7(@storybook/test@8.4.7(storybook@8.4.7(prettier@3.4.2)))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.4.7(prettier@3.4.2))(typescript@5.7.2)
@@ -16300,7 +16308,7 @@ snapshots:
       strip-final-newline: 4.0.0
       yoctocolors: 2.1.1
 
-  execa@9.5.1:
+  execa@9.5.2:
     dependencies:
       '@sindresorhus/merge-streams': 4.0.0
       cross-spawn: 7.0.6
@@ -16310,7 +16318,7 @@ snapshots:
       is-plain-obj: 4.1.0
       is-stream: 4.0.1
       npm-run-path: 6.0.0
-      pretty-ms: 9.1.0
+      pretty-ms: 9.2.0
       signal-exit: 4.1.0
       strip-final-newline: 4.0.0
       yoctocolors: 2.1.1
@@ -16397,7 +16405,7 @@ snapshots:
 
   figures@6.1.0:
     dependencies:
-      is-unicode-supported: 2.0.0
+      is-unicode-supported: 2.1.0
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -16890,7 +16898,7 @@ snapshots:
     dependencies:
       lru-cache: 10.4.3
 
-  hosted-git-info@8.0.0:
+  hosted-git-info@8.0.2:
     dependencies:
       lru-cache: 10.4.3
 
@@ -17006,9 +17014,9 @@ snapshots:
       parent-module: 1.0.1
       resolve-from: 4.0.0
 
-  import-from-esm@1.3.4:
+  import-from-esm@2.0.0:
     dependencies:
-      debug: 4.3.7
+      debug: 4.4.0
       import-meta-resolve: 4.1.0
     transitivePeerDependencies:
       - supports-color
@@ -17358,7 +17366,7 @@ snapshots:
 
   is-unicode-supported@0.1.0: {}
 
-  is-unicode-supported@2.0.0: {}
+  is-unicode-supported@2.1.0: {}
 
   is-utf8@0.2.1: {}
 
@@ -18202,7 +18210,7 @@ snapshots:
       cli-highlight: 2.1.11
       cli-table3: 0.6.5
       marked: 12.0.2
-      node-emoji: 2.1.3
+      node-emoji: 2.2.0
       supports-hyperlinks: 3.1.0
 
   marked@12.0.2: {}
@@ -18673,7 +18681,7 @@ snapshots:
 
   node-abort-controller@3.1.1: {}
 
-  node-emoji@2.1.3:
+  node-emoji@2.2.0:
     dependencies:
       '@sindresorhus/is': 4.6.0
       char-regex: 1.0.2
@@ -19357,6 +19365,10 @@ snapshots:
     dependencies:
       parse-ms: 4.0.0
 
+  pretty-ms@9.2.0:
+    dependencies:
+      parse-ms: 4.0.0
+
   proc-log@4.2.0: {}
 
   process-nextick-args@2.0.1: {}
@@ -19547,7 +19559,7 @@ snapshots:
     dependencies:
       find-up-simple: 1.0.0
       read-pkg: 9.0.1
-      type-fest: 4.30.2
+      type-fest: 4.31.0
 
   read-pkg@9.0.1:
     dependencies:
@@ -19893,25 +19905,25 @@ snapshots:
       ajv-formats: 2.1.1(ajv@8.17.1)
       ajv-keywords: 5.1.0(ajv@8.17.1)
 
-  semantic-release@24.2.0(typescript@5.7.2):
+  semantic-release@24.2.1(typescript@5.7.2):
     dependencies:
-      '@semantic-release/commit-analyzer': 13.0.0(semantic-release@24.2.0(typescript@5.7.2))
+      '@semantic-release/commit-analyzer': 13.0.1(semantic-release@24.2.1(typescript@5.7.2))
       '@semantic-release/error': 4.0.0
-      '@semantic-release/github': 11.0.1(semantic-release@24.2.0(typescript@5.7.2))
-      '@semantic-release/npm': 12.0.1(semantic-release@24.2.0(typescript@5.7.2))
-      '@semantic-release/release-notes-generator': 14.0.2(semantic-release@24.2.0(typescript@5.7.2))
+      '@semantic-release/github': 11.0.1(semantic-release@24.2.1(typescript@5.7.2))
+      '@semantic-release/npm': 12.0.1(semantic-release@24.2.1(typescript@5.7.2))
+      '@semantic-release/release-notes-generator': 14.0.3(semantic-release@24.2.1(typescript@5.7.2))
       aggregate-error: 5.0.0
       cosmiconfig: 9.0.0(typescript@5.7.2)
-      debug: 4.3.7
+      debug: 4.4.0
       env-ci: 11.1.0
-      execa: 9.5.1
+      execa: 9.5.2
       figures: 6.1.0
       find-versions: 6.0.0
       get-stream: 6.0.1
       git-log-parser: 1.2.1
       hook-std: 3.0.0
-      hosted-git-info: 8.0.0
-      import-from-esm: 1.3.4
+      hosted-git-info: 8.0.2
+      import-from-esm: 2.0.0
       lodash-es: 4.17.21
       marked: 12.0.2
       marked-terminal: 7.2.1(marked@12.0.2)
@@ -20688,6 +20700,8 @@ snapshots:
   type-fest@3.13.1: {}
 
   type-fest@4.30.2: {}
+
+  type-fest@4.31.0: {}
 
   typed-array-buffer@1.0.2:
     dependencies:
