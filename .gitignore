@@ -27,6 +27,12 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# docker compose
+compose.override.yaml
+compose.override.yml
+docker-compose.override.yaml
+docker-compose.override.yml
+
 # storybook
 storybook-static
 
