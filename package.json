@@ -7,7 +7,7 @@
     "prepare": "node .husky/install.js",
     "dev": "cross-env FORCE_COLOR=1 next dev --turbopack",
     "build": "next build",
-    "start": "next start --turbopack",
+    "start": "next start",
     "lint:js": "eslint \"**/*.{js,mjs,ts,tsx}\" --report-unused-disable-directives --max-warnings 0",
     "lint:md": "eslint \"**/*.md?(x)\" --report-unused-disable-directives --max-warnings 0 --cache --cache-strategy=content --cache-location=.eslintmdcache",
     "lint:css": "stylelint \"**/*.css\" --max-warnings 0 --allow-empty-input --cache --cache-strategy=content --cache-location=.stylelintcache",
