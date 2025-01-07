@@ -7,7 +7,7 @@
     "prepare": "node .husky/install.js",
     "dev": "cross-env FORCE_COLOR=1 next dev --turbopack",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --turbopack",
     "lint:js": "eslint \"**/*.{js,mjs,ts,tsx}\" --report-unused-disable-directives --max-warnings 0",
     "lint:md": "eslint \"**/*.md?(x)\" --report-unused-disable-directives --max-warnings 0 --cache --cache-strategy=content --cache-location=.eslintmdcache",
     "lint:css": "stylelint \"**/*.css\" --max-warnings 0 --allow-empty-input --cache --cache-strategy=content --cache-location=.stylelintcache",
@@ -50,7 +50,6 @@
     "@semantic-release/github": "^11.0.1",
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.1",
-    "@t3-oss/env-nextjs": "^0.11.1",
     "@vercel/otel": "^1.8.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -60,8 +59,7 @@
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
