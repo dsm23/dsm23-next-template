@@ -1,4 +1,7 @@
-export default {
+/**
+ *  @type {import("prettier").Options}
+ */
+const config = {
   plugins: [
     "prettier-plugin-css-order",
     "@ianvs/prettier-plugin-sort-imports",
@@ -27,3 +30,5 @@ export default {
   importOrderTypeScriptVersion: "5.7.2",
   tailwindFunctions: ["clsx", "cn", "cva", "cx"],
 };
+
+export default config;
