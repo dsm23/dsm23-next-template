@@ -75,6 +75,7 @@
     "@eslint/js": "^9.16.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@jest/globals": "^29.7.0",
+    "@jest/types": "^29.6.3",
     "@opentelemetry/api": "1.9.0",
     "@opentelemetry/resources": "1.30.0",
     "@opentelemetry/sdk-node": "0.57.0",
@@ -138,7 +139,6 @@
     "stylelint-order": "^6.0.4",
     "stylelint-selector-bem-pattern": "^4.0.1",
     "tailwindcss": "^3.4.16",
-    "ts-jest": "^29.2.5",
     "tsc": "^2.0.4",
     "typescript": "5.7.2",
     "typescript-eslint": "^8.17.0"
