@@ -37,6 +37,8 @@ export default {
     "at-rule-no-unknown": [true, { ignoreAtRules: CUSTOM_AT_RULES }],
     // Ignore Tailwind's theme and screen functions
     "function-no-unknown": [true, { ignoreFunctions: ["theme", "screen"] }],
+    "unit-no-unknown": [true, { ignoreFunctions: ["theme", "screen"] }],
+    "value-keyword-case": ["lower", { ignoreFunctions: ["theme", "screen"] }],
     // Allow the Global CSS Selector
     "selector-pseudo-class-no-unknown": [
       true,
@@ -46,8 +48,8 @@ export default {
     "order/properties-order": [
       {
         properties: [
-          "z-index",
           "display",
+          "z-index",
           "position",
           "top",
           "right",
