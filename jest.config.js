@@ -1,4 +1,7 @@
 import nextJest from "next/jest.js";
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
 
 const createJestConfig = nextJest({
   dir: "./",
@@ -22,10 +25,12 @@ const customJestConfig = {
     },
   },
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  moduleDirectories: ["node_modules", "<rootDir>/"],
   testEnvironment: "jest-environment-jsdom",
-  modulePathIgnorePatterns: ["<rootDir>/dist/"],
   testPathIgnorePatterns: ["<rootDir>/e2e/"],
   moduleNameMapper: {
+    // https://github.com/lucide-icons/lucide/issues/2734#issuecomment-2597970172
+    "lucide-react": require.resolve("lucide-react"),
     "^~/(.*)$": "<rootDir>/src/$1",
   },
 };
