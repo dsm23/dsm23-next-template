@@ -214,13 +214,13 @@ importers:
         specifier: ^29.5.14
         version: 29.5.14
       '@types/node':
-        specifier: ^22.10.1
+        specifier: ^22.10.9
         version: 22.10.9
       '@types/react':
-        specifier: ^19.0.0
+        specifier: 19.0.8
         version: 19.0.8
       '@types/react-dom':
-        specifier: ^19.0.0
+        specifier: 19.0.3
         version: 19.0.3(@types/react@19.0.8)
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.17.0
