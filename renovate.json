@@ -6,7 +6,7 @@
     "helpers:pinGitHubActionDigests",
     ":approveMajorUpdates",
     ":configMigration",
-    "enableVulnerabilityAlerts",
+    ":enableVulnerabilityAlerts",
     ":pinAllExceptPeerDependencies",
     "group:playwrightMonorepo"
   ],
