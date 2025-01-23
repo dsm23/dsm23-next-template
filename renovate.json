@@ -4,19 +4,12 @@
     "config:recommended",
     "docker:pinDigests",
     "helpers:pinGitHubActionDigests",
+    ":approveMajorUpdates",
     ":configMigration",
-    ":pinAllExceptPeerDependencies"
+    "enableVulnerabilityAlerts",
+    ":pinAllExceptPeerDependencies",
+    "group:playwrightMonorepo"
   ],
-  "dependencyDashboard": true,
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["major"],
-      "dependencyDashboardApproval": true
-    }
-  ],
-  "vulnerabilityAlerts": {
-    "enabled": true
-  },
   "rebaseWhen": "conflicted",
   "osvVulnerabilityAlerts": true
 }
