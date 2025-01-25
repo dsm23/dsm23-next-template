@@ -9,19 +9,6 @@
     ":enableVulnerabilityAlerts",
     ":pinAllExceptPeerDependencies"
   ],
-  "packageRules": [
-    {
-      "extends": ["monorepo:playwright"],
-      "groupName": "playwright monorepo",
-      "matchDatasources": ["docker", "github-runners", "npm"],
-      "matchPackageNames": [
-        "playwright",
-        "@playwright/test",
-        "mcr.microsoft.com/playwright"
-      ],
-      "matchUpdateTypes": ["digest", "patch", "minor", "major"]
-    }
-  ],
   "rebaseWhen": "conflicted",
   "osvVulnerabilityAlerts": true
 }
