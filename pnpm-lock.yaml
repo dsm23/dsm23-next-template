@@ -304,7 +304,7 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0
       lint-staged:
-        specifier: ^15.2.10
+        specifier: ^15.4.2
         version: 15.4.2
       mkdirp:
         specifier: ^3.0.1
