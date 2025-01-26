@@ -6,7 +6,8 @@
     "helpers:pinGitHubActionDigests",
     ":approveMajorUpdates",
     ":configMigration",
-    ":enableVulnerabilityAlerts"
+    ":enableVulnerabilityAlerts",
+    ":pinAllExceptPeerDependencies"
   ],
   "rebaseWhen": "conflicted",
   "osvVulnerabilityAlerts": true
