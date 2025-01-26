@@ -6,7 +6,6 @@ pull_request_rules:
       - check-success=analyze-bundle
       - check-success=build
       - check-success=chromatic
-      - check-success=code-review
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success=format
@@ -17,7 +16,7 @@ pull_request_rules:
       - check-success=snyk
       - check-success=unit-testing
       - check-success=zizmor
-      - "#check-success>=24"
+      - "#check-success>=22"
     actions:
       review:
         type: APPROVE
@@ -28,7 +27,6 @@ pull_request_rules:
       - check-success=analyze-bundle
       - check-success=build
       - check-success=chromatic
-      - check-success=code-review
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success=format
@@ -39,7 +37,7 @@ pull_request_rules:
       - check-success=snyk
       - check-success=unit-testing
       - check-success=zizmor
-      - "#check-success>=24"
+      - "#check-success>=22"
     actions:
       review:
         type: APPROVE
@@ -50,7 +48,6 @@ pull_request_rules:
       - check-success=analyze-bundle
       - check-success=build
       - check-success=chromatic
-      - check-success=code-review
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success=format
@@ -61,7 +58,7 @@ pull_request_rules:
       - check-success=snyk
       - check-success=unit-testing
       - check-success=zizmor
-      - "#check-success>=24"
+      - "#check-success>=22"
       - "#approved-reviews-by>=1"
     actions:
       merge:
