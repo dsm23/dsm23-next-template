@@ -28,11 +28,9 @@ With this template, you get all the awesomeness you need:
 - **[Radix UI](https://www.radix-ui.com/)** - Headless UI components for endless customization
 - **[CVA](http://cva.style/)** - Create a consistent, reusable, and atomic design system
 - **[Renovate BOT](https://www.whitesourcesoftware.com/free-developer-tools/renovate)** - Auto-updating dependencies, so you can focus on coding
-- **[Patch-package](https://www.npmjs.com/package/patch-package)** - Fix external dependencies without losing your mind
 - **Components coupling and cohesion graph** - A tool for managing component relationships
 - **[Automated ChatGPT Code Reviews](https://openai.com/chatgpt)** - **Stay on the cutting edge with AI-powered code reviews!**
 - **[Semantic Release](https://github.com/semantic-release/semantic-release)** - for automatic changelog
-- **[T3 Env](https://env.t3.gg/)** - Manage your environment variables with ease
 
 ## Table of Contents
 
