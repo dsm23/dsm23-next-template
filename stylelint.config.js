@@ -2,10 +2,14 @@
 const CUSTOM_AT_RULES = [
   // Tailwind-specific at-rules
   "apply",
+  "custom-variant",
   "layer",
+  "plugin",
   "responsive",
   "screen",
   "tailwind",
+  "theme",
+  "utility",
   "variants",
   // PostCSS-specific at-rules
   "define-mixin",
