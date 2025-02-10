@@ -144,5 +144,5 @@
   "engines": {
     "node": ">=22.0.0"
   },
-  "packageManager": "pnpm@10.2.1"
+  "packageManager": "pnpm@10.2.1+sha224.df1bd0e1a1072dec0f0f2fae1e88344b82f0838e8a1c540f8ee3089e"
 }
