@@ -20,6 +20,7 @@ COPY package.json pnpm-lock.yaml ./
 COPY .husky/ ./.husky/
 
 RUN corepack enable pnpm
+RUN corepack up
 RUN pnpm install --frozen-lockfile
 
 # Rebuild the source code only when needed
@@ -34,6 +35,7 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN corepack enable pnpm
+RUN corepack up
 RUN pnpm run build
 
 # Production image, copy all the files and run next
