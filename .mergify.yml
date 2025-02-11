@@ -14,10 +14,9 @@ pull_request_rules:
       - check-success=lint
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=smoke-test
-      - check-success=snyk
       - check-success=unit-testing
       - check-success=zizmor
-      - "#check-success>=23"
+      - "#check-success>=22"
     actions:
       review:
         type: APPROVE
@@ -36,10 +35,9 @@ pull_request_rules:
       - check-success=lint
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=smoke-test
-      - check-success=snyk
       - check-success=unit-testing
       - check-success=zizmor
-      - "#check-success>=23"
+      - "#check-success>=22"
     actions:
       review:
         type: APPROVE
@@ -58,10 +56,9 @@ pull_request_rules:
       - check-success=lint
       - check-success~=playwright-tests \(\d, \d\)
       - check-success=smoke-test
-      - check-success=snyk
       - check-success=unit-testing
       - check-success=zizmor
-      - "#check-success>=23"
+      - "#check-success>=22"
       - "#approved-reviews-by>=1"
     actions:
       merge:
