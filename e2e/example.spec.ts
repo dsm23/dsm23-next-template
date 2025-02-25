@@ -1,4 +1,4 @@
-import AxeBuilder from "@axe-core/playwright"; // 1
+import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
 test("has title", async ({ page }) => {
