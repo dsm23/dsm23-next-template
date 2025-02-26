@@ -7,6 +7,9 @@ import { cn } from "~/utils/classNames";
 
 import "~/styles/tailwind.css";
 
+import { PrivacyBanner } from "~/components/privacy-banner";
+import { PrivacyProvider } from "~/components/privacy-provider";
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -33,10 +36,13 @@ const RootLayout: FunctionComponent<PropsWithChildren> = async ({
           disableTransitionOnChange
           nonce={nonce}
         >
-          {children}
-          <footer className="mx-auto flex w-full items-center justify-center border-t py-16 text-center text-xs">
-            <ThemeSwitcher />
-          </footer>
+          <PrivacyProvider>
+            {children}
+            <footer className="mx-auto flex w-full items-center justify-center border-t py-16 text-center text-xs">
+              <ThemeSwitcher />
+              <PrivacyBanner />
+            </footer>
+          </PrivacyProvider>
         </ThemeProvider>
       </body>
     </html>
