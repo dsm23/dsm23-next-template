@@ -94,6 +94,18 @@ export default ts.config(
     ...ts.configs.disableTypeChecked,
   },
   {
+    files: ["**/*.{jsx,mdx,tsx}"],
+    rules: {
+      "react/function-component-definition": [
+        "error",
+        {
+          namedComponents: "arrow-function",
+          unnamedComponents: "arrow-function",
+        },
+      ],
+    },
+  },
+  {
     files: ["**/src/**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     rules: {
       "@typescript-eslint/consistent-type-definitions": "off",
@@ -129,6 +141,21 @@ export default ts.config(
         "error",
         {
           allow: ["debug", "error", "info", "trace", "warn"],
+        },
+      ],
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector:
+            "ImportDeclaration[source.value='react'][specifiers.0.type='ImportDefaultSpecifier']",
+          message:
+            "Default React import not allowed since we use the TypeScript jsx-transform. If you need a global type that collides with a React named export (such as `MouseEvent`), try using `globalThis.MouseHandler`",
+        },
+        {
+          selector:
+            "ImportDeclaration[source.value='react'] :matches(ImportNamespaceSpecifier)",
+          message:
+            "Named * React import is not allowed. Please import what you need from React with Named Imports",
         },
       ],
       "tailwindcss/no-custom-classname": "off",
