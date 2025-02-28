@@ -59,7 +59,7 @@
     "@vercel/otel": "1.10.1",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
-    "import-in-the-middle": "1.13.0",
+    "import-in-the-middle": "1.13.1",
     "lodash": "4.17.21",
     "lucide-react": "0.476.0",
     "next": "15.2.0",
