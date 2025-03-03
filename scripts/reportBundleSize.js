@@ -7,9 +7,9 @@
 // edited to work with the appdir by @raphaelbadia
 import { readFile } from "fs/promises";
 import fs from "node:fs";
+import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { gzipSizeSync } from "gzip-size";
-import { mkdirp } from "mkdirp";
 
 // Pull options from `package.json`
 const options = await getOptions();
@@ -65,8 +65,9 @@ const rawData = JSON.stringify({
 // log outputs to the gh actions panel
 console.log(rawData);
 
-mkdirp.sync(path.join(nextMetaRoot, "analyze/"));
-fs.writeFileSync(
+await mkdir(path.join(nextMetaRoot, "analyze/"), { recursive: true });
+
+await writeFile(
   path.join(nextMetaRoot, "analyze/__bundle_analysis.json"),
   rawData,
 );
