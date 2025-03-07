@@ -107,7 +107,7 @@
     "dotenv": "16.4.7",
     "eslint": "9.21.0",
     "eslint-config-next": "15.2.1",
-    "eslint-config-prettier": "10.0.2",
+    "eslint-config-prettier": "10.1.1",
     "eslint-config-react-app": "7.0.1",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-mdx": "3.1.5",
