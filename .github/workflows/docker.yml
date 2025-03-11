@@ -41,11 +41,11 @@ jobs:
 
       - name: Get package.json version
         id: project-version
-        run: 'cat package.json | grep version | head -1 | awk -F: ''{ print $2 }'' | sed ''s/[",]//g'''
+        run: echo "version=$(jq -r .version package.json)" >> $GITHUB_OUTPUT
 
       - name: Get Date
         id: date
-        run: date +"%Y%m%d"
+        run: echo "day=$(date +'%Y%m%d')" >> $GITHUB_OUTPUT
 
       - name: Build image and push to registry
         uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4 # v6.15.0
@@ -56,7 +56,7 @@ jobs:
           push: ${{ github.ref_name == github.event.repository.default_branch }}
           tags: >
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest,
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.project-version }}-experimental-${{ github.sha }}-${{ steps.date}}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.project-version.outputs.version }}-experimental-${{ github.sha }}-${{ steps.date.outputs.day }}
 
       - name: Deploy to Coolify
         if: ${{ github.ref_name == github.event.repository.default_branch }}
