@@ -6,7 +6,6 @@ pull_request_rules:
       - check-success=amd64
       - check-success=analyze-bundle
       - check-success=build
-      - check-success=chromatic
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success=format
@@ -27,7 +26,6 @@ pull_request_rules:
       - check-success=amd64
       - check-success=analyze-bundle
       - check-success=build
-      - check-success=chromatic
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success=format
@@ -48,7 +46,6 @@ pull_request_rules:
       - check-success=amd64
       - check-success=analyze-bundle
       - check-success=build
-      - check-success=chromatic
       - check-success~=codeql \([a-z]*\)
       - check-success=dependency-review
       - check-success=format
