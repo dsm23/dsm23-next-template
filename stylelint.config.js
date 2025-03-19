@@ -2,6 +2,7 @@
 const CUSTOM_AT_RULES = [
   // Tailwind-specific at-rules
   "apply",
+  "config",
   "custom-variant",
   "layer",
   "plugin",
