@@ -139,7 +139,7 @@ importers:
         version: 3.0.2
       tailwindcss-animate:
         specifier: 1.0.7
-        version: 1.0.7(tailwindcss@4.0.14)
+        version: 1.0.7(tailwindcss@4.0.15)
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.10.1
@@ -275,7 +275,7 @@ importers:
         version: 0.11.6(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
       eslint-plugin-tailwindcss:
         specifier: 3.18.0
-        version: 3.18.0(tailwindcss@4.0.14)
+        version: 3.18.0(tailwindcss@4.0.15)
       fetch-mock:
         specifier: 12.5.2
         version: 12.5.2
@@ -331,8 +331,8 @@ importers:
         specifier: 4.0.1
         version: 4.0.1(stylelint@16.16.0(typescript@5.8.2))
       tailwindcss:
-        specifier: 4.0.14
-        version: 4.0.14
+        specifier: 4.0.15
+        version: 4.0.15
       tsc:
         specifier: 2.0.4
         version: 2.0.4
@@ -8259,9 +8259,6 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
-  tailwindcss@4.0.14:
-    resolution: {integrity: sha512-92YT2dpt671tFiHH/e1ok9D987N9fHD5VWoly1CdPD/Cd1HMglvZwP3nx2yTj2lbXDAHt8QssZkxTLCCTNL+xw==}
-
   tailwindcss@4.0.15:
     resolution: {integrity: sha512-6ZMg+hHdMJpjpeCCFasX7K+U615U9D+7k5/cDK/iRwl6GptF24+I/AbKgOnXhVKePzrEyIXutLv36n4cRsq3Sg==}
 
@@ -14455,11 +14452,11 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-tailwindcss@3.18.0(tailwindcss@4.0.14):
+  eslint-plugin-tailwindcss@3.18.0(tailwindcss@4.0.15):
     dependencies:
       fast-glob: 3.3.3
       postcss: 8.5.3
-      tailwindcss: 4.0.14
+      tailwindcss: 4.0.15
 
   eslint-plugin-testing-library@5.11.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2):
     dependencies:
@@ -18508,11 +18505,9 @@ snapshots:
 
   tailwind-merge@3.0.2: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@4.0.14):
+  tailwindcss-animate@1.0.7(tailwindcss@4.0.15):
     dependencies:
-      tailwindcss: 4.0.14
-
-  tailwindcss@4.0.14: {}
+      tailwindcss: 4.0.15
 
   tailwindcss@4.0.15: {}
 
