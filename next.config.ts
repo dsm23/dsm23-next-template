@@ -24,7 +24,9 @@ const nextConfig: NextConfig = {
 };
 
 export default () => {
-  const plugins = [withBundleAnalyzer({ enabled: process.env.ANALYZE })];
+  const plugins = [
+    withBundleAnalyzer({ enabled: Boolean(process.env.ANALYZE) }),
+  ];
 
   const config = plugins.reduce((acc, next) => next(acc), {
     ...nextConfig,
