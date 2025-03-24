@@ -12,10 +12,11 @@ pull_request_rules:
       - check-success=gitleaks
       - check-success=lint
       - check-success~=playwright-tests \(\d, \d\)
+      - check-success=pr-title
       - check-success=smoke-test
       - check-success=unit-testing
       - check-success=zizmor
-      - "#check-success>=22"
+      - "#check-success>=23"
     actions:
       review:
         type: APPROVE
@@ -32,10 +33,11 @@ pull_request_rules:
       - check-success=gitleaks
       - check-success=lint
       - check-success~=playwright-tests \(\d, \d\)
+      - check-success=pr-title
       - check-success=smoke-test
       - check-success=unit-testing
       - check-success=zizmor
-      - "#check-success>=22"
+      - "#check-success>=23"
     actions:
       review:
         type: APPROVE
@@ -52,10 +54,11 @@ pull_request_rules:
       - check-success=gitleaks
       - check-success=lint
       - check-success~=playwright-tests \(\d, \d\)
+      - check-success=pr-title
       - check-success=smoke-test
       - check-success=unit-testing
       - check-success=zizmor
-      - "#check-success>=22"
+      - "#check-success>=23"
       - "#approved-reviews-by>=1"
     actions:
       merge:
