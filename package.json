@@ -128,7 +128,7 @@
     "prettier-plugin-tailwindcss": "0.6.11",
     "semantic-release": "24.2.3",
     "storybook": "8.6.9",
-    "stylelint": "16.16.0",
+    "stylelint": "16.17.0",
     "stylelint-config-standard": "37.0.0",
     "stylelint-order": "6.0.4",
     "stylelint-selector-bem-pattern": "4.0.1",
