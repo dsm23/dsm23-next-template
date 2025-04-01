@@ -13,7 +13,7 @@ env:
   HUSKY: 0
 
 jobs:
-  playwright-tests:
+  playwright-test-shard:
     timeout-minutes: 60
     runs-on: ubuntu-24.04
     strategy:
@@ -73,11 +73,10 @@ jobs:
           path: playwright-report/
           retention-days: 1
 
-  all-playwright-green:
-    name: All Playwright Green
+  playwright-tests:
     runs-on: ubuntu-24.04
     needs:
-      - playwright-tests
+      - playwright-test-shard
     steps:
-      - if: ${{ always() && (contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')) }}
+      - if: ${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}
         run: exit 1
