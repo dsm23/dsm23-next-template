@@ -12,6 +12,11 @@ on:
 env:
   HUSKY: 0
 
+permissions:
+  contents: read
+  # Write permissions for pull-requests are required for creating the Jest coverage comment, comment out if you aren't using this option
+  pull-requests: write
+
 jobs:
   unit-testing:
     runs-on: ubuntu-24.04
@@ -52,6 +57,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Unit & Integration tests
-        run: pnpm test --coverage
+        run: pnpm test --coverage --coverageReporters json-summary
         env:
           FORCE_COLOR: 1
+
+      - name: Jest Coverage Comment
+        uses: MishaKav/jest-coverage-comment@d74238813c33e6ea20530ff91b5ea37953d11c91 #v1.0.27
