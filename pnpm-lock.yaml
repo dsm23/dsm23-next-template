@@ -265,8 +265,8 @@ importers:
         specifier: 2.31.0
         version: 2.31.0(@typescript-eslint/parser@8.29.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-typescript@3.7.0)(eslint@9.23.0(jiti@2.4.2))
       eslint-plugin-mdx:
-        specifier: 3.3.1
-        version: 3.3.1(eslint@9.23.0(jiti@2.4.2))
+        specifier: 3.3.2
+        version: 3.3.2(eslint@9.23.0(jiti@2.4.2))
       eslint-plugin-react:
         specifier: 7.37.5
         version: 7.37.5(eslint@9.23.0(jiti@2.4.2))
@@ -4735,8 +4735,8 @@ packages:
       eslint-plugin-import-x:
         optional: true
 
-  eslint-mdx@3.3.1:
-    resolution: {integrity: sha512-3koPGGjGOKXxWBIY0ExcMhtEGWRpbM/xrqIp6c4XDxZOMs/nIUEZKnaKZf+sAMRtqdv5Z99Nq5izWyCLoTdcGg==}
+  eslint-mdx@3.3.2:
+    resolution: {integrity: sha512-GFeLoM2S5Jx0iTXYvsp/do/UNTzV+vRNfNxRglelXb9ZNSfUFGHsq60ZcHyUvpxy2crPebCX4gzT/FRu/LJRbA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -4803,8 +4803,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
 
-  eslint-plugin-mdx@3.3.1:
-    resolution: {integrity: sha512-YXm2YANiJ3Sl/6AdZUeR53deGG1JI6rG9crHITR2Mtb9k8SFWRspoHetnIvaYTEfgPsvUwAwVgT1JxRoZywpTA==}
+  eslint-plugin-mdx@3.3.2:
+    resolution: {integrity: sha512-zBvxCiKzahbTRvWPONDZups1As5clGjv1OLOLnX/p+OwdrZdcwJ3tiBihu6xeZuem9u6iwMkr9kHVurcuzbTCg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -8288,8 +8288,8 @@ packages:
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
 
-  synckit@0.10.3:
-    resolution: {integrity: sha512-R1urvuyiTaWfeCggqEvpDJwAlDVdsT9NM+IP//Tk2x7qHCkSvBk/fwFgw/TLAHzZlrAnnazMcRw0ZD8HlYFTEQ==}
+  synckit@0.11.2:
+    resolution: {integrity: sha512-1IUffI8zZ8qUMB3NUJIjk0RpLroG/8NkQDAWH1NbB2iJ0/5pn3M8rxfNzMz4GH9OnYaGYn31LEDSXJp/qIlxgA==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
   table@6.9.0:
@@ -14301,7 +14301,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-mdx@3.3.1(eslint@9.23.0(jiti@2.4.2)):
+  eslint-mdx@3.3.2(eslint@9.23.0(jiti@2.4.2)):
     dependencies:
       acorn: 8.14.1
       acorn-jsx: 5.3.2(acorn@8.14.1)
@@ -14311,7 +14311,7 @@ snapshots:
       remark-mdx: 3.1.0
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
-      synckit: 0.10.3
+      synckit: 0.11.2
       tslib: 2.8.1
       unified: 11.0.5
       unified-engine: 11.2.2
@@ -14469,15 +14469,15 @@ snapshots:
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-mdx@3.3.1(eslint@9.23.0(jiti@2.4.2)):
+  eslint-plugin-mdx@3.3.2(eslint@9.23.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.23.0(jiti@2.4.2)
-      eslint-mdx: 3.3.1(eslint@9.23.0(jiti@2.4.2))
+      eslint-mdx: 3.3.2(eslint@9.23.0(jiti@2.4.2))
       mdast-util-from-markdown: 2.0.2
       remark-mdx: 3.1.0
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
-      synckit: 0.10.3
+      synckit: 0.11.2
       tslib: 2.8.1
       unified: 11.0.5
       vfile: 6.0.3
@@ -18594,7 +18594,7 @@ snapshots:
 
   symbol-tree@3.2.4: {}
 
-  synckit@0.10.3:
+  synckit@0.11.2:
     dependencies:
       '@pkgr/core': 0.2.0
       tslib: 2.8.1
