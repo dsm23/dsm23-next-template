@@ -337,7 +337,7 @@ importers:
         specifier: 2.0.4
         version: 2.0.4
       tw-animate-css:
-        specifier: ^1.2.8
+        specifier: 1.2.8
         version: 1.2.8
       typescript:
         specifier: 5.8.3
