@@ -99,8 +99,8 @@
     "@types/node": "22.15.3",
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
-    "@typescript-eslint/eslint-plugin": "8.31.0",
-    "@typescript-eslint/parser": "8.31.0",
+    "@typescript-eslint/eslint-plugin": "8.31.1",
+    "@typescript-eslint/parser": "8.31.1",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
     "dotenv": "16.5.0",
@@ -136,7 +136,7 @@
     "tsc": "2.0.4",
     "tw-animate-css": "1.2.8",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.31.0"
+    "typescript-eslint": "8.31.1"
   },
   "engines": {
     "node": ">=22.0.0"
