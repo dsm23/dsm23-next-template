@@ -1,3 +1,5 @@
+"use client";
+
 import type { ComponentProps, FunctionComponent } from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
