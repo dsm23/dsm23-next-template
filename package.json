@@ -78,7 +78,7 @@
     "@eslint/compat": "1.2.9",
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.27.0",
-    "@ianvs/prettier-plugin-sort-imports": "4.4.1",
+    "@ianvs/prettier-plugin-sort-imports": "4.4.2",
     "@jest/globals": "29.7.0",
     "@jest/types": "29.6.3",
     "@playwright/test": "1.52.0",
