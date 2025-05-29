@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
             exclude: ["error", "warn"],
           },
         },
+  experimental: {
+    typedRoutes: true,
+  },
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
