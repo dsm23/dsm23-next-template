@@ -13,7 +13,7 @@ env:
   HUSKY: 0
 
 permissions:
-  pull-requests: write
+  contents: read
 
 defaults:
   run:
@@ -25,6 +25,8 @@ jobs:
     env:
       SKIP_ENV_VALIDATION: true
     runs-on: ubuntu-24.04
+    permissions:
+      pull-requests: write
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.12.0
