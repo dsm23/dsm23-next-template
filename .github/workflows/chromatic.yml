@@ -34,7 +34,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Run Chromatic
-        uses: chromaui/action@39708fe33252ca58c08b791fef95536ed2a1b976 # v12.1.0
+        uses: chromaui/action@8536229ee904071f8edce292596f6dbe0da96b9b # v12.1.1
         with:
           # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
