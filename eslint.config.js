@@ -10,9 +10,6 @@ import storybook from "eslint-plugin-storybook";
 import globals from "globals";
 import ts from "typescript-eslint";
 
-// TODO: bring back tailwind eslint plugin after it's been updated
-// import tailwind from "eslint-plugin-tailwindcss";
-
 const gitignorePath = path.resolve(import.meta.dirname, ".gitignore");
 
 const compat = new FlatCompat();
@@ -44,7 +41,6 @@ export default ts.config(
   ...ts.configs.stylisticTypeChecked,
   react.configs.flat["jsx-runtime"],
   prettier,
-  // ...tailwind.configs["flat/recommended"],
   ...compatConfig,
   {
     files: ["**/*.{js,md,mdx,mjs,ts,tsx}"],
