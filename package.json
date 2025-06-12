@@ -114,6 +114,7 @@
     "jest": "30.0.0",
     "jest-environment-jsdom": "30.0.0",
     "lefthook": "1.11.13",
+    "lost-pixel": "3.22.0",
     "npm-run-all2": "8.0.4",
     "postcss": "8.5.5",
     "postinstall-postinstall": "2.1.0",
