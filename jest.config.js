@@ -24,7 +24,7 @@ const customJestConfig = {
   injectGlobals: false,
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleDirectories: ["node_modules", "<rootDir>/"],
-  testEnvironment: "jest-environment-jsdom",
+  testEnvironment: "jsdom",
   testPathIgnorePatterns: ["<rootDir>/e2e/"],
   moduleNameMapper: {
     "^~/(.*)$": "<rootDir>/src/$1",
