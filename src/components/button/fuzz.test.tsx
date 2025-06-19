@@ -1,49 +1,43 @@
-// double space contracted issue occurs on seed 1413643214
-
 import crypto from "node:crypto";
 import { fc, it } from "@fast-check/jest";
-import { afterEach, describe, expect } from "@jest/globals";
-import { cleanup, render, screen } from "@testing-library/react";
+import { describe, expect } from "@jest/globals";
+import { render, screen } from "@testing-library/react";
 import { Button } from ".";
 
 describe("component", () => {
   describe("Button", () => {
-    afterEach(() => {
-      cleanup();
-    });
-
     it("should render correctly with various children", () => {
       fc.assert(
-        fc.property(fc.string(), (testValue) => {
+        fc.property(fc.string(), (buttonText) => {
           const id = crypto.randomUUID();
-
-          const buttonText = testValue.replace(/\s+/g, " ");
 
           render(<Button data-testid={id}>{buttonText}</Button>);
 
           expect(screen.getByTestId(id)).toBeInTheDocument();
-          expect(screen.getByTestId(id)).toHaveTextContent(buttonText.trim());
+          expect(screen.getByTestId(id)).toHaveTextContent(buttonText, {
+            normalizeWhitespace: false,
+          });
         }),
       );
     });
 
     it("should render correctly, asChild, with various children", () => {
       fc.assert(
-        fc.property(fc.string(), fc.webUrl(), (testValue, href) => {
+        fc.property(fc.string(), fc.webUrl(), (linkText, href) => {
           const id = crypto.randomUUID();
-
-          const linkText = testValue.replace(/\s+/g, " ");
 
           render(
             <Button asChild>
               <a href={href} data-testid={id}>
-                {linkText.normalize()}
+                {linkText}
               </a>
             </Button>,
           );
 
           expect(screen.getByTestId(id)).toBeInTheDocument();
-          expect(screen.getByTestId(id)).toHaveTextContent(linkText.trim());
+          expect(screen.getByTestId(id)).toHaveTextContent(linkText, {
+            normalizeWhitespace: false,
+          });
           expect(screen.getByTestId(id)).toHaveAttribute("href", href.trim());
         }),
       );
@@ -51,10 +45,8 @@ describe("component", () => {
 
     it("should handle various className values", () => {
       fc.assert(
-        fc.property(fc.string(), (testValue) => {
+        fc.property(fc.string(), (className) => {
           const id = crypto.randomUUID();
-
-          const className = testValue.replace(/\s+/g, " ");
 
           render(
             <Button className={className} data-testid={id}>
