@@ -28,6 +28,9 @@ build
 *.sln
 *.sw?
 
+# lefthook
+lefthook-local.yml
+
 # debug
 npm-debug.log*
 yarn-debug.log*
