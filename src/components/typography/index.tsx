@@ -1,7 +1,7 @@
 import { createElement } from "react";
 import type { FunctionComponent, HTMLAttributes, JSX } from "react";
 import { Slot } from "@radix-ui/react-slot";
-import { cn } from "~/utils/classNames";
+import { cn } from "~/utils/class-names";
 
 // Reusable helper to create components with consistent structure
 const createComponent = <T extends HTMLElement>(

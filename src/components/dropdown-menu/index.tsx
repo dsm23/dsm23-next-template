@@ -3,7 +3,7 @@
 import type { ComponentProps, FunctionComponent } from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react";
-import { cn } from "~/utils/classNames";
+import { cn } from "~/utils/class-names";
 
 const DropdownMenu: FunctionComponent<
   ComponentProps<typeof DropdownMenuPrimitive.Root>
