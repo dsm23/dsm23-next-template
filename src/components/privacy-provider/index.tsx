@@ -8,7 +8,7 @@ import {
   useState,
 } from "react";
 import type { FunctionComponent, ReactNode } from "react";
-import canUseDom from "~/utils/canUseDom";
+import canUseDom from "~/utils/can-use-dom";
 
 type Privacy = {
   cookieConsent?: boolean;
