@@ -3,7 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import { headers } from "next/headers";
 import { ThemeProvider } from "~/components/theme-provider";
 import { ThemeSwitcher } from "~/components/theme-switcher";
-import { cn } from "~/utils/classNames";
+import { cn } from "~/utils/class-names";
 
 import "~/styles/tailwind.css";
 

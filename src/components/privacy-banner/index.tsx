@@ -5,7 +5,7 @@ import type { FunctionComponent } from "react";
 import Link from "next/link";
 import { Button, buttonVariants } from "~/components/button";
 import { usePrivacy } from "~/components/privacy-provider";
-import { cn } from "~/utils/classNames";
+import { cn } from "~/utils/class-names";
 
 export const PrivacyBanner: FunctionComponent = () => {
   const [closeBanner, setCloseBanner] = useState(false);
