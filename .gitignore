@@ -61,3 +61,7 @@ storybook-static
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
