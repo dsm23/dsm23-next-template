@@ -7,10 +7,13 @@ FROM node:24.4.1-alpine@sha256:820e86612c21d0636580206d802a726f2595366e1b867e564
 # TODO: re-add corepack after it's been removed
 # RUN npm install -g corepack@latest
 
+# renovate: datasource=repology depName=alpine_3_22/gcompat versioning=loose
+ARG GCOMPAT_VERSION="1.1.0-r4"
+
 # Install dependencies only when needed
 FROM base AS deps
-# Check https://github.com/nodejs/docker-node?tab=readme-ov-file#nodealpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache gcompat=1.1.0-r4
+# Check https://github.com/nodejs/docker-node/tree/4adafb930bf239b610fa37c4f691bbf98dd65578#nodealpine to understand why gcompat might be needed.
+RUN apk add --no-cache "gcompat=${GCOMPAT_VERSION}"
 WORKDIR /app
 
 ENV LEFTHOOK=0
