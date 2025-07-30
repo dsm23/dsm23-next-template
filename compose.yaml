@@ -1,0 +1,8 @@
+services:
+  otel-lgtm:
+    image: grafana/otel-lgtm:0.11.6@sha256:33aade90e180fcb3e6ff61b963be6d82237a83cbfe88e70fe1a73059b04e1fa0
+    ports:
+      - "4000:3000"
+      - "4317:4317"
+      - "4318:4318"
+    restart: "no"
