@@ -3,7 +3,8 @@ import path from "node:path";
 import { defineConfig, devices } from "@playwright/test";
 import dotenv from "dotenv";
 
-const PORT = process.env.PORT || 3000;
+const portDev = 3000;
+const portProd = 3001;
 
 const injectFromEnvFile = () => {
   const envDir = ".";
@@ -29,68 +30,75 @@ injectFromEnvFile();
  */
 export default defineConfig({
   testDir: "./e2e",
-  /* Run tests in files in parallel */
   fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
-
-  /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: "html",
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  reporter: process.env.CI ? "blob" : "html",
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: `http://localhost:${PORT}`,
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
   },
-
-  /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: "chromium-dev",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: `http://localhost:${portDev}`,
+      },
     },
 
     {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      name: "firefox-dev",
+      use: {
+        ...devices["Desktop Firefox"],
+        baseURL: `http://localhost:${portDev}`,
+      },
     },
 
     {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"] },
+      name: "webkit-dev",
+      use: {
+        ...devices["Desktop Safari"],
+        baseURL: `http://localhost:${portDev}`,
+      },
     },
 
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
+    {
+      name: "chromium-prod",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: `http://localhost:${portProd}`,
+      },
+    },
 
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ..devices['Desktop Chrome'], channel: 'chrome' },
-    // },
+    {
+      name: "firefox-prod",
+      use: {
+        ...devices["Desktop Firefox"],
+        baseURL: `http://localhost:${portProd}`,
+      },
+    },
+
+    {
+      name: "webkit-prod",
+      use: {
+        ...devices["Desktop Safari"],
+        baseURL: `http://localhost:${portProd}`,
+      },
+    },
   ],
 
   /* Run your local dev server before starting the tests */
-  webServer: {
-    command: "pnpm dev",
-    url: `http://localhost:${PORT}`,
-    reuseExistingServer: !process.env.CI,
-  },
+  webServer: [
+    {
+      command: `pnpm run build && pnpm run start --port ${portProd}`,
+      url: `http://localhost:${portProd}`,
+      reuseExistingServer: !process.env.CI,
+    },
+    {
+      command: `pnpm run dev --port ${portDev}`,
+      url: `http://localhost:${portDev}`,
+      reuseExistingServer: !process.env.CI,
+    },
+  ],
 });
