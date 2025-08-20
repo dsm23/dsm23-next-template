@@ -35,9 +35,6 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Build next.js app
-        env:
-          SKIP_BUILD_PRODUCT_REDIRECTS: 1
-        # change this if your site requires a custom build command
         run: pnpm build
 
       # Here's the first place where next-bundle-analysis' own script is used
