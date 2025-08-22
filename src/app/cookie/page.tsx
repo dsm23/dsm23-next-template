@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: "Cookie Policy",
 };
 
-const CookiePage: FunctionComponent = (props) => {
-  return <ClientPage {...props} />;
+const CookiePage: FunctionComponent<PageProps<"/cookie">> = () => {
+  return <ClientPage />;
 };
 
 export default CookiePage;

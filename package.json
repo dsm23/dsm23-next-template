@@ -15,7 +15,7 @@
     "fmt.check": "prettier . --check --cache --cache-strategy=content --cache-location=.prettiercache",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "check-types": "./node_modules/typescript/bin/tsc --noEmit",
+    "check-types": "next typegen && ./node_modules/typescript/bin/tsc --noEmit",
     "test": "jest",
     "test:smoke": "vitest",
     "e2e:headless": "playwright test",
