@@ -1,14 +1,41 @@
 import path from "node:path";
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
-import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
+import tsconfigPaths from "vite-tsconfig-paths";
+import {
+  coverageConfigDefaults,
+  defaultExclude,
+  defineConfig,
+} from "vitest/config";
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  optimizeDeps: {
-    include: ["@mdx-js/react", "markdown-to-jsx"],
-  },
+  plugins: [react(), tsconfigPaths()],
   test: {
+    globals: false,
+    environment: "jsdom",
+    setupFiles: "./src/vitest.setup.ts",
+    exclude: [...defaultExclude, "**/playwright-tests/**"],
+    coverage: {
+      all: true,
+      include: ["src/**/*.[jt]s?(x)"],
+      exclude: ["**/e2e/**", ...coverageConfigDefaults.exclude],
+      thresholds: {
+        lines: 10,
+        functions: 10,
+        branches: 10,
+        statements: 10,
+      },
+    },
     projects: [
+      {
+        extends: true,
+        test: {
+          name: "unit",
+          include: ["src/**/?(*.)+(spec|test).[jt]s?(x)"],
+          exclude: [...defaultExclude, "**/e2e/**"],
+        },
+      },
       {
         extends: true,
         plugins: [

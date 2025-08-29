@@ -1,7 +1,7 @@
 import type { ReactElement } from "react";
-import { afterEach, describe, expect, it } from "@jest/globals";
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { afterEach, describe, expect, it } from "vitest";
 // import { render } from "@workspace/ui/test-utils";
 import type { Options } from "@testing-library/user-event";
 import {

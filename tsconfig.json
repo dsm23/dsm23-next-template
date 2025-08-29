@@ -24,7 +24,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "baseUrl": ".",
-    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "types": ["node", "@testing-library/jest-dom"],
     "paths": {
       "~/*": ["src/*"]
     },
@@ -39,7 +39,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.mjs",
-    "jest.setup.js",
+    "src/vitest.setup.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]

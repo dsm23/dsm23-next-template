@@ -1,7 +1,7 @@
 /* eslint-disable no-constant-binary-expression */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 
-import { describe, expect, it } from "@jest/globals";
+import { describe, expect, it } from "vitest";
 import { cn } from ".";
 
 describe("utils", () => {

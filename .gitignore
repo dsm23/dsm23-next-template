@@ -6,7 +6,8 @@ node_modules
 .pnp.js
 
 # testing
-coverage
+coverage/
+.vitest-reports/
 
 # next.js
 .next/
