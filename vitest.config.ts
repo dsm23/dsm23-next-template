@@ -15,11 +15,15 @@ export default defineConfig({
     globals: false,
     environment: "jsdom",
     setupFiles: "./src/vitest.setup.ts",
-    exclude: [...defaultExclude, "**/playwright-tests/**"],
+    exclude: [...defaultExclude, "**/e2e/**"],
     coverage: {
       all: true,
       include: ["src/**/*.[jt]s?(x)"],
-      exclude: ["**/e2e/**", ...coverageConfigDefaults.exclude],
+      exclude: [
+        "src/**/*.stories.[jt]s?(x)",
+        "**/e2e/**",
+        ...coverageConfigDefaults.exclude,
+      ],
       thresholds: {
         lines: 10,
         functions: 10,
