@@ -46,7 +46,6 @@ jobs:
           --coverage.enabled
           --coverage.reporter=json
           --coverage.reporter=json-summary
-          --coverage.reporter=text
           --coverage.thresholds.branches 0
           --coverage.thresholds.functions 0
           --coverage.thresholds.lines 0
