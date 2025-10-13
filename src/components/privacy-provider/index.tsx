@@ -58,6 +58,7 @@ const PrivacyProvider: FunctionComponent<{ children: ReactNode }> = ({
       const consent = getLocaleStorage();
 
       if (consent) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCookieConsent(consent.accepted || false);
         return;
       }
