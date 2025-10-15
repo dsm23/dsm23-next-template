@@ -24,7 +24,6 @@
   "dependencies": {
     "@next/bundle-analyzer": "15.5.4",
     "@opentelemetry/api-logs": "0.206.0",
-    "@opentelemetry/exporter-jaeger": "2.1.0",
     "@opentelemetry/exporter-trace-otlp-http": "0.206.0",
     "@opentelemetry/instrumentation": "0.206.0",
     "@opentelemetry/resources": "2.1.0",
