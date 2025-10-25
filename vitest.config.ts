@@ -1,6 +1,7 @@
 import path from "node:path";
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 import react from "@vitejs/plugin-react";
+import { playwright } from "@vitest/browser-playwright";
 import tsconfigPaths from "vite-tsconfig-paths";
 import {
   coverageConfigDefaults,
@@ -17,11 +18,9 @@ export default defineConfig({
     setupFiles: "./src/vitest.setup.ts",
     exclude: [...defaultExclude, "**/e2e/**"],
     coverage: {
-      all: true,
       include: ["src/**/*.[jt]s?(x)"],
       exclude: [
         "src/**/*.stories.[jt]s?(x)",
-        "**/e2e/**",
         ...coverageConfigDefaults.exclude,
       ],
       thresholds: {
@@ -54,7 +53,7 @@ export default defineConfig({
           browser: {
             enabled: true,
             headless: true,
-            provider: "playwright",
+            provider: playwright(),
             instances: [{ browser: "chromium" }],
           },
           setupFiles: [".storybook/vitest.setup.ts"],
