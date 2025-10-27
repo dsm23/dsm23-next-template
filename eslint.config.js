@@ -1,33 +1,34 @@
-// import next from "@next/eslint-plugin-next";
-import path from "node:path";
-import { fixupPluginRules, includeIgnoreFile } from "@eslint/compat";
-import { FlatCompat } from "@eslint/eslintrc";
+import next from "@next/eslint-plugin-next";
 import js from "@eslint/js";
 import prettier from "eslint-config-prettier";
 import * as mdx from "eslint-plugin-mdx";
 import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
 import storybook from "eslint-plugin-storybook";
+import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
-import ts from "typescript-eslint";
+import tseslint from "typescript-eslint";
 
-const gitignorePath = path.resolve(import.meta.dirname, ".gitignore");
-
-const compat = new FlatCompat();
-
-const compatConfig = compat.config({
-  extends: [
-    // https://github.com/vercel/next.js/discussions/49337
-    "plugin:@next/eslint-plugin-next/core-web-vitals",
-
-    // https://github.com/facebook/react/issues/28313
-    "plugin:react-hooks/recommended",
-  ],
-});
-
-export default ts.config(
-  includeIgnoreFile(gitignorePath),
+export default defineConfig(
+  globalIgnores([
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+    "coverage/**",
+    "storybook-static/**",
+  ]),
+  prettier,
   {
-    files: ["**/*.{js,mjs,cjs,ts,md,mdx,jsx,tsx}"],
+    files: ["**/src/**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.strictTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
+      reactHooks.configs.flat["recommended-latest"],
+      next.flatConfig.coreWebVitals,
+      storybook.configs["flat/recommended"],
+    ],
     languageOptions: {
       globals: globals.nodeBuiltin,
       parserOptions: {
@@ -36,61 +37,22 @@ export default ts.config(
       },
     },
   },
-  js.configs.recommended,
-  ...ts.configs.strictTypeChecked,
-  ...ts.configs.stylisticTypeChecked,
-  react.configs.flat["jsx-runtime"],
-  prettier,
-  ...compatConfig,
-  {
-    files: ["**/*.{js,md,mdx,mjs,ts,tsx}"],
-
-    rules: {
-      "@next/next/no-duplicate-head": "off",
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
-  },
-  {
-    files: [
-      "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
-      "*.story.@(ts|tsx|js|jsx|mjs|cjs)",
-    ],
-    plugins: {
-      storybook: fixupPluginRules(storybook),
-    },
-    rules: {
-      "react-hooks/rules-of-hooks": "off",
-      "import/no-anonymous-default-export": "off",
-      "storybook/await-interactions": "error",
-      "storybook/context-in-play-function": "error",
-      "storybook/default-exports": "error",
-      "storybook/hierarchy-separator": "warn",
-      "storybook/no-redundant-story-name": "warn",
-      "storybook/prefer-pascal-case": "warn",
-      "storybook/story-exports": "error",
-      "storybook/use-storybook-expect": "error",
-      "storybook/use-storybook-testing-library": "error",
-    },
-  },
-  {
-    files: [".storybook/main.@(js|cjs|mjs|ts)"],
-    plugins: {
-      storybook: fixupPluginRules(storybook),
-    },
-    rules: {
-      "storybook/no-uninstalled-addons": "error",
-    },
-  },
-  {
-    files: ["!**/src/**", "**/src/stories/**"],
-    ...ts.configs.disableTypeChecked,
-  },
   {
     files: ["**/*.{jsx,mdx,tsx}"],
+    extends: [
+      react.configs.flat.recommended,
+      react.configs.flat["jsx-runtime"],
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.serviceworker,
+        ...globals.browser,
+      },
+      parserOptions: {
+        projectService: true,
+        tsconfigDirName: import.meta.dirname,
+      },
+    },
     rules: {
       "react/function-component-definition": [
         "error",
@@ -100,6 +62,7 @@ export default ts.config(
         },
       ],
     },
+    settings: { react: { version: "detect" } },
   },
   {
     files: ["**/src/**/*.{js,mjs,cjs,ts,jsx,tsx}"],
@@ -154,15 +117,22 @@ export default ts.config(
             "Named * React import is not allowed. Please import what you need from React with Named Imports",
         },
       ],
-      "tailwindcss/no-custom-classname": "off",
     },
   },
   {
-    // Configure.mdx
-    files: ["**/*.mdx"],
-    rules: {
-      "react/jsx-uses-vars": "error",
-      "tailwindcss/no-custom-classname": "off",
+    files: ["!**/src/**", "*.{js,mjs,cjs,ts,jsx,tsx}"],
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommended,
+      reactHooks.configs.flat["recommended-latest"],
+      prettier,
+    ],
+    languageOptions: {
+      globals: globals.nodeBuiltin,
+      // parserOptions: {
+      //   projectService: true,
+      //   tsconfigDirName: import.meta.dirname,
+      // },
     },
   },
   mdx.flat,
