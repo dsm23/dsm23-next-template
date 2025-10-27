@@ -9,18 +9,24 @@ const CookiePage = () => (
       <P>Effective as of February 26, 2025.</P>
       <P>
         This cookie policy explains how Payload CMS, Inc. and our subsidiaries
-        and affiliates ("<b>Payload</b>," "<b>we</b>", “<b>us</b>” or "
-        <b>our</b>") use cookies to help improve your experience of our website
-        at <a href="https://payloadcms.com/">https://payloadcms.com</a> and any
+        and affiliates ({'"'}
+        <b>Payload</b>,{'"'} {'"'}
+        <b>we</b>
+        {'"'}, {'"'}
+        <b>us</b>
+        {'"'} or {'"'}
+        <b>our</b>
+        {'"'}) use cookies to help improve your experience of our website at{" "}
+        <a href="https://payloadcms.com/">https://payloadcms.com</a> and any
         other website that we own or control and which posts or links to this
         cookie policy (collectively, the “Sites”). This cookie policy
-        complements Payload's privacy policy. It covers the use of cookies
+        complements Payload{"'"}s privacy policy. It covers the use of cookies
         between your device and our Sites.
       </P>
       <P>
         We also provide basic information on third-party services we may use,
-        who may also use cookies as part of their service. If you don't wish to
-        accept cookies from us or from third-parties on which we rely, please
+        who may also use cookies as part of their service. If you don{"'"}t wish
+        to accept cookies from us or from third-parties on which we rely, please
         let us know by rejecting all or some categories of cookies via the
         cookie banner that is displayed to you when you visit our Sites. In such
         a case, we may be unable to provide you with some of your desired
@@ -33,8 +39,8 @@ const CookiePage = () => (
         A cookie is a small piece of data that a website stores on your device
         when you visit. It typically contains information about the website
         itself, a unique identifier that allows the website to recognize your
-        web browser when you return, additional data that serves the cookie's
-        purpose, and the lifespan of the cookie itself.
+        web browser when you return, additional data that serves the cookie{"'"}
+        s purpose, and the lifespan of the cookie itself.
       </P>
       <P>
         Cookies are used to enable certain features (e.g. logging in), track
@@ -73,8 +79,9 @@ const CookiePage = () => (
         across all Sites users. They help companies understand visitor usage
         patterns, identify and diagnose problems or errors their users may
         encounter, and make better strategic decisions in improving their
-        audience's overall website experience. These cookies may be set by the
-        website you're visiting (first-party cookie) or by third-party services.
+        audience{"'"}s overall website experience. These cookies may be set by
+        the website you{"'"}re visiting (first-party cookie) or by third-party
+        services.
       </P>
       <P>We use performance cookies on our Sites.</P>
       <H4 asChild>
@@ -82,10 +89,10 @@ const CookiePage = () => (
       </H4>
       <P>
         Functional cookies are used to collect information about your device and
-        any settings you may configure on the website you're visiting (like
+        any settings you may configure on the website you{"'"}re visiting (like
         language and time zone settings). With this information, websites can
         provide you with customized, enhanced, or optimized content and
-        services. These cookies may be set by the website you're visiting
+        services. These cookies may be set by the website you{"'"}re visiting
         (first-party) or by third-party services.
       </P>
       <P>We use functional cookies for selected features on our Sites.</P>
@@ -98,10 +105,10 @@ const CookiePage = () => (
         use them to deliver targeted advertising or limit the number of times
         you see an advertisement. This helps companies improve the effectiveness
         of their campaigns and the quality of content presented to you. These
-        cookies may be set by the website you're visiting (first-party) or by
-        third-party services. Targeting/advertising cookies set by third-parties
-        may be used to track you on other websites that use the same third-party
-        service.
+        cookies may be set by the website you{"'"}re visiting (first-party) or
+        by third-party services. Targeting/advertising cookies set by
+        third-parties may be used to track you on other websites that use the
+        same third-party service.
       </P>
       <P>We use targeting/advertising cookies on our Sites.</P>
       <H4 asChild>
@@ -130,14 +137,14 @@ const CookiePage = () => (
             <tr>
               <td>_hstc</td>
               <td>Targeting/advertising: to store time of visit.</td>
-              <td>1 year after the user's visit</td>
+              <td>1 year after the user{"'"}s visit</td>
               <td>HubSpot</td>
               <td>
                 You can read more about how HubSpot manages data{" "}
                 <a href="https://knowledge.hubspot.com/privacy-and-consent/what-cookies-does-hubspot-set-in-a-visitor-s-browser">
                   here
                 </a>
-                . See your choices' section below.
+                . See your choices{"'"} section below.
               </td>
             </tr>
             <tr>
@@ -150,7 +157,7 @@ const CookiePage = () => (
                 <a href="https://knowledge.hubspot.com/privacy-and-consent/what-cookies-does-hubspot-set-in-a-visitor-s-browser">
                   here
                 </a>
-                . See your choices' section below.
+                . See your choices{"'"} section below.
               </td>
             </tr>
             <tr>
@@ -163,28 +170,29 @@ const CookiePage = () => (
                 <a href="https://knowledge.hubspot.com/privacy-and-consent/what-cookies-does-hubspot-set-in-a-visitor-s-browser">
                   here
                 </a>
-                . See your choices' section below.
+                . See your choices{"'"} section below.
               </td>
             </tr>
             <tr>
               <td>hubspotutk</td>
               <td>
-                Targeting/advertising: to store and track a visitor's identity.
+                Targeting/advertising: to store and track a visitor{"'"}s
+                identity.
               </td>
-              <td>1 year and a half after the user's visit</td>
+              <td>1 year and a half after the user{"'"}s visit</td>
               <td>HubSpot</td>
               <td>
                 You can read more about how HubSpot manages data{" "}
                 <a href="https://knowledge.hubspot.com/privacy-and-consent/what-cookies-does-hubspot-set-in-a-visitor-s-browser">
                   here
                 </a>
-                . See your choices' section below.
+                . See your choices{"'"} section below.
               </td>
             </tr>
             <tr>
               <td>_ga</td>
               <td>Performance: to store and count pageviews.</td>
-              <td>2 years after the user's visit</td>
+              <td>2 years after the user{"'"}s visit</td>
               <td>Google</td>
               <td>
                 You can find out more information about Google Analytics cookies{" "}
@@ -199,13 +207,13 @@ const CookiePage = () => (
                 <a href="https://tools.google.com/dlpage/gaoptout?hl=en-GB">
                   here
                 </a>
-                . See your choices' section below.
+                . See your choices{"'"} section below.
               </td>
             </tr>
             <tr>
               <td>_gcl_au</td>
               <td>Targeting/advertising: to store and track conversions.</td>
-              <td>1 year after the user's visit</td>
+              <td>1 year after the user{"'"}s visit</td>
               <td>Google</td>
               <td>
                 You can find out more information about Google Analytics cookies{" "}
@@ -220,7 +228,7 @@ const CookiePage = () => (
                 <a href="https://tools.google.com/dlpage/gaoptout?hl=en-GB">
                   here
                 </a>
-                . See your choices' section below.
+                . See your choices{"'"} section below.
               </td>
             </tr>
             <tr>
@@ -241,7 +249,7 @@ const CookiePage = () => (
                 <a href="https://tools.google.com/dlpage/gaoptout?hl=en-GB">
                   here
                 </a>
-                . See your choices' section below.
+                . See your choices{"'"} section below.
               </td>
             </tr>
           </tbody>
@@ -334,7 +342,7 @@ const CookiePage = () => (
         instructions in your browser settings. Many browsers accept cookies by
         default until you change your settings. In order to understand these
         settings, the following links may be helpful. Otherwise, you should use
-        the 'Help' option in your internet browser for more details:
+        the {"'"}Help{"'"} option in your internet browser for more details:
       </P>
       <ul>
         <li>
