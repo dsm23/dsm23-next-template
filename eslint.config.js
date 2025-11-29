@@ -18,19 +18,20 @@ export default defineConfig(
     "coverage/**",
     "storybook-static/**",
   ]),
+  js.configs.recommended,
+  tseslint.configs.recommended,
   prettier,
+  reactHooks.configs.flat["recommended-latest"],
+  next.configs["core-web-vitals"],
+  storybook.configs["flat/recommended"],
   {
-    files: ["**/src/**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    basePath: "src",
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     extends: [
-      js.configs.recommended,
       tseslint.configs.strictTypeChecked,
       tseslint.configs.stylisticTypeChecked,
-      reactHooks.configs.flat["recommended-latest"],
-      next.configs["core-web-vitals"],
-      storybook.configs["flat/recommended"],
     ],
     languageOptions: {
-      globals: globals.nodeBuiltin,
       parserOptions: {
         projectService: true,
         tsconfigDirName: import.meta.dirname,
@@ -38,34 +39,8 @@ export default defineConfig(
     },
   },
   {
-    files: ["**/*.{jsx,mdx,tsx}"],
-    extends: [
-      react.configs.flat.recommended,
-      react.configs.flat["jsx-runtime"],
-    ],
-    languageOptions: {
-      globals: {
-        ...globals.serviceworker,
-        ...globals.browser,
-      },
-      parserOptions: {
-        projectService: true,
-        tsconfigDirName: import.meta.dirname,
-      },
-    },
-    rules: {
-      "react/function-component-definition": [
-        "error",
-        {
-          namedComponents: "arrow-function",
-          unnamedComponents: "arrow-function",
-        },
-      ],
-    },
-    settings: { react: { version: "detect" } },
-  },
-  {
-    files: ["**/src/**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    basePath: "src",
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     rules: {
       "@typescript-eslint/consistent-type-definitions": "off",
       "@typescript-eslint/consistent-type-imports": [
@@ -120,20 +95,31 @@ export default defineConfig(
     },
   },
   {
-    files: ["!**/src/**", "*.{js,mjs,cjs,ts,jsx,tsx}"],
+    files: ["**/*.{jsx,mdx,tsx}"],
     extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      reactHooks.configs.flat["recommended-latest"],
-      prettier,
+      react.configs.flat.recommended,
+      react.configs.flat["jsx-runtime"],
     ],
     languageOptions: {
-      globals: globals.nodeBuiltin,
-      // parserOptions: {
-      //   projectService: true,
-      //   tsconfigDirName: import.meta.dirname,
-      // },
+      globals: {
+        ...globals.serviceworker,
+        ...globals.browser,
+      },
+      parserOptions: {
+        projectService: true,
+        tsconfigDirName: import.meta.dirname,
+      },
     },
+    rules: {
+      "react/function-component-definition": [
+        "error",
+        {
+          namedComponents: "arrow-function",
+          unnamedComponents: "arrow-function",
+        },
+      ],
+    },
+    settings: { react: { version: "detect" } },
   },
   mdx.flat,
 );
