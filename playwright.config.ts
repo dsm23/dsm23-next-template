@@ -3,8 +3,7 @@ import path from "node:path";
 import { defineConfig, devices } from "@playwright/test";
 import dotenv from "dotenv";
 
-const portDev = 3000;
-const portProd = 3001;
+const PORT = process.env.PORT ?? "3000";
 
 const injectFromEnvFile = () => {
   const envDir = ".";
@@ -31,74 +30,35 @@ injectFromEnvFile();
 export default defineConfig({
   testDir: "./e2e",
   fullyParallel: true,
-  forbidOnly: !!process.env.CI,
+  forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI ? "blob" : "html",
   use: {
+    baseURL: `http://localhost:${PORT}`,
+
     trace: "on-first-retry",
   },
   projects: [
     {
-      name: "chromium-dev",
-      use: {
-        ...devices["Desktop Chrome"],
-        baseURL: `http://localhost:${portDev}`,
-      },
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
     },
 
     {
-      name: "firefox-dev",
-      use: {
-        ...devices["Desktop Firefox"],
-        baseURL: `http://localhost:${portDev}`,
-      },
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"] },
     },
 
     {
-      name: "webkit-dev",
-      use: {
-        ...devices["Desktop Safari"],
-        baseURL: `http://localhost:${portDev}`,
-      },
-    },
-
-    {
-      name: "chromium-prod",
-      use: {
-        ...devices["Desktop Chrome"],
-        baseURL: `http://localhost:${portProd}`,
-      },
-    },
-
-    {
-      name: "firefox-prod",
-      use: {
-        ...devices["Desktop Firefox"],
-        baseURL: `http://localhost:${portProd}`,
-      },
-    },
-
-    {
-      name: "webkit-prod",
-      use: {
-        ...devices["Desktop Safari"],
-        baseURL: `http://localhost:${portProd}`,
-      },
+      name: "webkit",
+      use: { ...devices["Desktop Safari"] },
     },
   ],
 
-  /* Run your local dev server before starting the tests */
-  webServer: [
-    {
-      command: `pnpm run build && pnpm run start --port ${portProd}`,
-      url: `http://localhost:${portProd}`,
-      reuseExistingServer: !process.env.CI,
-    },
-    {
-      command: `pnpm run dev --port ${portDev}`,
-      url: `http://localhost:${portDev}`,
-      reuseExistingServer: !process.env.CI,
-    },
-  ],
+  webServer: {
+    command: "pnpm run dev",
+    url: `http://localhost:${PORT}`,
+    reuseExistingServer: !process.env.CI,
+  },
 });
