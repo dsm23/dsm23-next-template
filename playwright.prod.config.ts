@@ -30,11 +30,18 @@ injectFromEnvFile();
  */
 export default defineConfig({
   ...config,
+  use: {
+    ...config.use,
+    baseURL: `http://localhost:${PORT}`,
+  },
 
   /* Run your local build server before starting the tests */
   webServer: [
     {
-      command: `pnpm run build && PORT=${PORT} HOSTNAME=0.0.0.0 node .next/standalone/server.js`,
+      command: `pnpm run build \\
+        && ln -s "$(pwd)/public" .next/standalone \\
+        && ln -s "$(pwd)/.next/static" .next/standalone/.next \\
+        && PORT=${PORT} HOSTNAME=0.0.0.0 node .next/standalone/server.js`,
       url: `http://0.0.0.0:${PORT}`,
       reuseExistingServer: !process.env.CI,
     },
