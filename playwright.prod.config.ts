@@ -36,14 +36,12 @@ export default defineConfig({
   },
 
   /* Run your local build server before starting the tests */
-  webServer: [
-    {
-      command: `pnpm run build \\
+  webServer: {
+    command: `pnpm run build \\
         && ln -s "$(pwd)/public" .next/standalone \\
         && ln -s "$(pwd)/.next/static" .next/standalone/.next \\
         && PORT=${PORT} HOSTNAME=127.0.0.1 node .next/standalone/server.js`,
-      url: `http://localhost:${PORT}`,
-      reuseExistingServer: !process.env.CI,
-    },
-  ],
+    url: `http://localhost:${PORT}`,
+    reuseExistingServer: !process.env.CI,
+  },
 });
