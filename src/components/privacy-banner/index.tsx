@@ -33,7 +33,7 @@ export const PrivacyBanner: FunctionComponent = () => {
   return (
     <div
       className={cn(
-        "fixed right-4 bottom-4 z-50 w-max max-w-[500px] rounded border-2 text-left text-base",
+        "fixed right-4 bottom-4 z-50 w-max max-w-125 rounded border-2 text-left text-base",
         {
           ["animate-out slide-out-to-bottom duration-300"]: animateOut,
         },

@@ -5,6 +5,7 @@ import * as mdx from "eslint-plugin-mdx";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import storybook from "eslint-plugin-storybook";
+import tailwindCanonicalClasses from "eslint-plugin-tailwind-canonical-classes";
 import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -90,6 +91,19 @@ export default defineConfig(
             "ImportDeclaration[source.value='react'] :matches(ImportNamespaceSpecifier)",
           message:
             "Named * React import is not allowed. Please import what you need from React with Named Imports",
+        },
+      ],
+    },
+  },
+  {
+    plugins: {
+      "tailwind-canonical-classes": tailwindCanonicalClasses,
+    },
+    rules: {
+      "tailwind-canonical-classes/tailwind-canonical-classes": [
+        "warn",
+        {
+          cssPath: "./src/styles/tailwind.css",
         },
       ],
     },
