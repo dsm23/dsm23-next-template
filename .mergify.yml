@@ -1,3 +1,12 @@
+queue_rules:
+  # If you have other queues defined, add this at the end so it is processed last
+  - name: dep-update
+    batch_size: 2
+    # Wait for up to 30 minutes for the batch to fill up
+    batch_max_wait_time: 30 min
+    queue_conditions:
+      - author=renovate[bot]
+
 pull_request_rules:
   # approve
   - name: automatic approval
@@ -76,6 +85,11 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+  - name: Automatically queue Renovate PRs
+    conditions:
+      - author=renovate[bot]
+    actions:
+      queue:
   # delete
   - name: automatic deletion of head branch after merge
     conditions:
