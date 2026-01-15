@@ -9,7 +9,6 @@ queue_rules:
     batch_max_wait_time: 30 min
     queue_conditions:
       - author=renovate[bot]
-    update_bot_account: renovate[bot]
     update_method: rebase
 
 pull_request_rules:
