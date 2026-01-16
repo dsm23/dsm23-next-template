@@ -4,13 +4,11 @@ merge_queue:
 queue_rules:
   # If you have other queues defined, add this at the end so it is processed last
   - name: dep-update
-    batch_size: 1
+    autoqueue: true
     # Wait for up to 30 minutes for the batch to fill up
     batch_max_wait_time: 30 min
     queue_conditions:
       - author=renovate[bot]
-    update_bot_account: dsm23
-    update_method: rebase
 
 pull_request_rules:
   # approve
@@ -95,6 +93,16 @@ pull_request_rules:
       - author=renovate[bot]
     actions:
       queue:
+  - name: Ask Renovate to rebase when out of date
+    conditions:
+      - author=renovate[bot]
+      - queue-name=dep-update
+      - queue-position=0
+      - "#commits-behind > 0"
+    actions:
+      label:
+        add:
+          - rebase
   # delete
   - name: automatic deletion of head branch after merge
     conditions:
