@@ -2,10 +2,8 @@ merge_queue:
   max_parallel_checks: 1
 
 queue_rules:
-  # If you have other queues defined, add this at the end so it is processed last
   - name: dep-update
     autoqueue: true
-    # Wait for up to 30 minutes for the batch to fill up
     batch_max_wait_time: 30 min
     queue_conditions:
       - author=renovate[bot]
@@ -31,10 +29,9 @@ queue_rules:
           - check-pending!=renovate/stability-days
 
 pull_request_rules:
-  # approve
   - name: automatic approval
     conditions:
-      - author=dsm23
+      - author!=renovate[bot]
       - check-success=amd64
       - check-success=build
       - check-success=codeql (actions)
@@ -54,7 +51,7 @@ pull_request_rules:
     actions:
       review:
         type: APPROVE
-        message: Automatically approving dsm23
+        message: "Automatically approving {{ author }}"
 
   - name: automatic approval for Renovate pull requests
     conditions:
