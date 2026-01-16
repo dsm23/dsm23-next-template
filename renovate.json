@@ -68,5 +68,6 @@
       ]
     }
   ],
+  "rebaseWhen": "never",
   "osvVulnerabilityAlerts": true
 }
