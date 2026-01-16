@@ -9,6 +9,26 @@ queue_rules:
     batch_max_wait_time: 30 min
     queue_conditions:
       - author=renovate[bot]
+    merge_conditions:
+      - check-success=amd64
+      - check-success=build
+      - check-success=codeql (actions)
+      - check-success=codeql (javascript)
+      - check-success=codeql (typescript)
+      - check-success=dependency-review
+      - check-success=format
+      - check-success=gitleaks
+      - check-success=lint
+      - check-success=playwright-tests
+      - check-success=pr-title
+      - check-success=renovate
+      - check-success=smoke-test
+      - check-success=types
+      - check-success=unit-testing
+      - check-success=zizmor
+      - or:
+          - check-success=renovate/stability-days
+          - check-pending!=renovate/stability-days
 
 pull_request_rules:
   # approve
@@ -35,6 +55,7 @@ pull_request_rules:
       review:
         type: APPROVE
         message: Automatically approving dsm23
+
   - name: automatic approval for Renovate pull requests
     conditions:
       - author=renovate[bot]
@@ -57,14 +78,14 @@ pull_request_rules:
       - or:
           - check-success=renovate/stability-days
           - check-pending!=renovate/stability-days
-
     actions:
       review:
         type: APPROVE
         message: Automatically approving renovate
-  # merge
+
   - name: Automatically merge when GitHub Actions jobs succeed
     conditions:
+      - author!=renovate[bot]
       - check-success=amd64
       - check-success=build
       - check-success=codeql (actions)
@@ -88,11 +109,13 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+
   - name: Automatically queue Renovate PRs
     conditions:
       - author=renovate[bot]
     actions:
       queue:
+
   - name: Ask Renovate to rebase when out of date
     conditions:
       - author=renovate[bot]
@@ -103,7 +126,7 @@ pull_request_rules:
       label:
         add:
           - rebase
-  # delete
+
   - name: automatic deletion of head branch after merge
     conditions:
       - merged
