@@ -5,9 +5,8 @@ queue_rules:
   - name: dep-update
     autoqueue: true
     batch_max_wait_time: 30 min
-    queue_conditions:
+    queue_conditions: &ref_conditions
       - author=renovate[bot]
-    merge_conditions:
       - check-success=amd64
       - check-success=build
       - check-success=codeql (actions)
@@ -27,6 +26,7 @@ queue_rules:
       - or:
           - check-success=renovate/stability-days
           - check-pending!=renovate/stability-days
+    merge_conditions: *ref_conditions
 
 pull_request_rules:
   - name: automatic approval
