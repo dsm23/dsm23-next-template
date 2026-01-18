@@ -28,14 +28,14 @@ queue_rules:
     autoqueue: true
     batch_max_wait_time: 30 min
     queue_conditions: &queue_conditions
-      - author=renovate[bot]
+      - author = renovate[bot]
       - and: *common_checks
     merge_conditions: *queue_conditions
 
 pull_request_rules:
   - name: automatic approval
     conditions:
-      - author!=renovate[bot]
+      - author != renovate[bot]
       - and: *common_checks
     actions:
       review:
@@ -44,7 +44,7 @@ pull_request_rules:
 
   - name: automatic approval for Renovate pull requests
     conditions:
-      - author=renovate[bot]
+      - author = renovate[bot]
       - and: *common_checks
     actions:
       review:
@@ -53,7 +53,7 @@ pull_request_rules:
 
   - name: Automatically merge when GitHub Actions jobs succeed
     conditions:
-      - author!=renovate[bot]
+      - author != renovate[bot]
       - and: *common_checks
     actions:
       merge:
@@ -61,16 +61,18 @@ pull_request_rules:
 
   - name: Automatically queue Renovate PRs
     conditions:
-      - author=renovate[bot]
+      - author = renovate[bot]
     actions:
       queue:
 
   - name: Ask Renovate to rebase when out of date
     conditions:
-      - author=renovate[bot]
-      - queue-name=dep-update
-      - queue-position=0
-      - "#commits-behind > 0"
+      - author = renovate[bot]
+      - queue-name = dep-update
+      - queue-position = 0
+      - or:
+          - "#commits-behind > 0"
+          - conflict
     actions:
       label:
         add:
