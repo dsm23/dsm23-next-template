@@ -68,6 +68,6 @@
       ]
     }
   ],
-  "rebaseWhen": "conflicted",
+  "rebaseWhen": "never",
   "osvVulnerabilityAlerts": true
 }
