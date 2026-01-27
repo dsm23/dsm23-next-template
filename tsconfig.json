@@ -39,7 +39,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.mjs",
-    "src/vitest.setup.ts",
+    "test-utils",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],

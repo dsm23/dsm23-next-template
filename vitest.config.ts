@@ -3,11 +3,7 @@ import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 import react from "@vitejs/plugin-react";
 import { playwright } from "@vitest/browser-playwright";
 import tsconfigPaths from "vite-tsconfig-paths";
-import {
-  coverageConfigDefaults,
-  defaultExclude,
-  defineConfig,
-} from "vitest/config";
+import { defineConfig } from "vitest/config";
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
@@ -15,14 +11,10 @@ export default defineConfig({
   test: {
     globals: false,
     environment: "jsdom",
-    setupFiles: "./src/vitest.setup.ts",
-    exclude: [...defaultExclude, "**/e2e/**"],
+    setupFiles: "./test-utils/vitest.setup.ts",
     coverage: {
       include: ["src/**/*.[jt]s?(x)"],
-      exclude: [
-        "src/**/*.stories.[jt]s?(x)",
-        ...coverageConfigDefaults.exclude,
-      ],
+      exclude: ["src/**/*.stories.[jt]s?(x)", "test-utils/**", "**/*.d.ts"],
       thresholds: {
         lines: 10,
         functions: 10,
@@ -36,7 +28,6 @@ export default defineConfig({
         test: {
           name: "unit",
           include: ["src/**/?(*.)+(spec|test).[jt]s?(x)"],
-          exclude: [...defaultExclude, "**/e2e/**"],
         },
       },
       {
