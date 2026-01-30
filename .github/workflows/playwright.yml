@@ -85,7 +85,7 @@ jobs:
           retention-days: 1
 
   playwright-tests:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-slim
     needs:
       - playwright-test-shard
     steps:
