@@ -32,7 +32,8 @@ queue_rules:
       - "#approved-reviews-by >= 1"
       - and: *common_checks
     merge_conditions: *queue_conditions
-    update_bot_account: "{{ author }}"
+    # update_bot_account: "{{ author }}"
+    update_bot_account: dsm23
     update_method: rebase
 
 pull_request_rules:
