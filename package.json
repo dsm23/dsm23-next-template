@@ -61,7 +61,7 @@
     "tailwind-merge": "3.4.0"
   },
   "devDependencies": {
-    "@axe-core/playwright": "4.11.0",
+    "@axe-core/playwright": "4.11.1",
     "@chromatic-com/storybook": "5.0.0",
     "@commitlint/cli": "20.4.1",
     "@commitlint/config-conventional": "20.4.1",
