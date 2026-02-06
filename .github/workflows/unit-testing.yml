@@ -61,7 +61,7 @@ jobs:
           retention-days: 1
 
   unit-testing:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-slim
     needs:
       - unit-testing-shard
     permissions:
