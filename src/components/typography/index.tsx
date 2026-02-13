@@ -1,6 +1,6 @@
 import { createElement } from "react";
 import type { FunctionComponent, HTMLAttributes, JSX } from "react";
-import { Slot } from "@radix-ui/react-slot";
+import { Slot } from "radix-ui";
 import { cn } from "~/utils/class-names";
 
 // Reusable helper to create components with consistent structure
@@ -20,7 +20,7 @@ const createComponent = <T extends HTMLElement>(
     ...props
   }) => {
     return createElement(
-      asChild ? Slot : tag,
+      asChild ? Slot.Root : tag,
       { ...props, className: cn(defaultClassName, className) },
       children,
     );

@@ -2,14 +2,14 @@
 
 import { useTheme } from "next-themes";
 import { Laptop, Moon, Sun } from "lucide-react";
-import { Button } from "~/components/button";
+import { Button } from "~/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
-} from "~/components/dropdown-menu";
+} from "~/components/ui/dropdown-menu";
 import useMounted from "~/hooks/use-mounted";
 
 const ThemeSwitcher = () => {
