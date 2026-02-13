@@ -1,0 +1,53 @@
+import { fn } from "storybook/test";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Button } from "~/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from ".";
+
+const meta = {
+  title: "Components/Shadcn/DropdownMenu",
+  component: DropdownMenu,
+  parameters: {
+    layout: "centered",
+  },
+  args: {
+    defaultOpen: false,
+    open: false,
+    modal: true,
+    onOpenChange: fn(),
+  },
+  tags: ["autodocs"],
+} satisfies Meta<typeof DropdownMenu>;
+
+type Story = StoryObj<typeof DropdownMenu>;
+
+export const Default: Story = {
+  render: (args) => (
+    <DropdownMenu {...args}>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline">Open</Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuGroup>
+          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Billing</DropdownMenuItem>
+          <DropdownMenuItem>Settings</DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem>GitHub</DropdownMenuItem>
+        <DropdownMenuItem>Support</DropdownMenuItem>
+        <DropdownMenuItem disabled>API</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  ),
+};
+
+export default meta;

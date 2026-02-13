@@ -1,6 +1,6 @@
 import type { FunctionComponent } from "react";
 import type { Metadata } from "next";
-import { Button } from "~/components/button";
+import { Button } from "~/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",

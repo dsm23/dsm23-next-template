@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import type { FunctionComponent } from "react";
 import Link from "next/link";
-import { Button, buttonVariants } from "~/components/button";
 import { usePrivacy } from "~/components/privacy-provider";
+import { Button, buttonVariants } from "~/components/ui/button";
 import { cn } from "~/utils/class-names";
 
 export const PrivacyBanner: FunctionComponent = () => {
