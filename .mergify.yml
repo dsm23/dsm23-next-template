@@ -10,6 +10,7 @@ shared:
     - check-success = format
     - check-success = gitleaks
     - check-success = lint
+    - check-success = nix-flake-check
     - check-success = playwright-tests
     - check-success = pr-title
     - check-success = renovate
