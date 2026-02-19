@@ -22,18 +22,26 @@ shared:
         - check-success = renovate/stability-days
         - check-pending != renovate/stability-days
 
+merge_protections_settings:
+  reporting_method: check-runs
+  post_comment: true
+
 merge_queue:
-  max_parallel_checks: 1
+  max_parallel_checks: 5
 
 queue_rules:
   - name: dep-update
     autoqueue: true
+    allow_queue_branch_edit: true
+    batch_size: 5
     batch_max_wait_time: 30 min
     queue_conditions: &queue_conditions
       - author = renovate[bot]
       - "#approved-reviews-by >= 1"
       - and: *common_checks
-    merge_conditions: *queue_conditions
+    merge_conditions:
+      - label != rebase
+      - and: *queue_conditions
 
 pull_request_rules:
   - name: automatic approval
