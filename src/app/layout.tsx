@@ -1,14 +1,13 @@
 import type { FunctionComponent } from "react";
 import { Inter as FontSans } from "next/font/google";
 import { headers } from "next/headers";
+import { PrivacyBanner } from "~/components/privacy-banner";
+import { PrivacyProvider } from "~/components/privacy-provider";
 import { ThemeProvider } from "~/components/theme-provider";
 import { ThemeSwitcher } from "~/components/theme-switcher";
 import { cn } from "~/utils/class-names";
 
 import "~/styles/tailwind.css";
-
-import { PrivacyBanner } from "~/components/privacy-banner";
-import { PrivacyProvider } from "~/components/privacy-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
