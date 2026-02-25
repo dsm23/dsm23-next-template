@@ -277,7 +277,6 @@ This project is licensed under the MIT License. For more information, see the [L
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
   <tbody>
@@ -299,7 +298,6 @@ This project is licensed under the MIT License. For more information, see the [L
 </table>
 
 <!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

@@ -45,10 +45,6 @@
       "groupName": "eslint packages"
     },
     {
-      "groupName": "prettier packages",
-      "matchPackageNames": ["prettier**", "@ianvs/prettier-plugin-sort-imports"]
-    },
-    {
       "extends": ["packages:react"],
       "groupName": "react packages"
     },

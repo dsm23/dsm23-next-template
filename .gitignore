@@ -56,7 +56,6 @@ storybook-static
 # Cache Files
 .eslintmdcache
 .stylelintcache
-.prettiercache
 
 # playwright
 /test-results/
