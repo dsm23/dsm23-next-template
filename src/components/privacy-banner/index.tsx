@@ -35,11 +35,11 @@ export const PrivacyBanner: FunctionComponent = () => {
       className={cn(
         "fixed right-4 bottom-4 z-50 w-max max-w-125 rounded border-2 text-left text-base",
         {
-          ["animate-out slide-out-to-bottom duration-300"]: animateOut,
+          ["animate-out duration-300 slide-out-to-bottom"]: animateOut,
         },
       )}
     >
-      <div className="bg-background relative flex flex-col items-center justify-between p-6">
+      <div className="relative flex flex-col items-center justify-between bg-background p-6">
         <p>
           We use cookies, subject to your consent, to analyze the use of our
           website and to ensure you get the best experience. Third parties with
