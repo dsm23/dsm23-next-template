@@ -24,7 +24,7 @@ const RootLayout: FunctionComponent<LayoutProps<"/">> = async ({
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <body
         className={cn(
-          "bg-background min-h-dvh font-sans antialiased",
+          "min-h-dvh bg-background font-sans antialiased",
           fontSans.variable,
         )}
       >
