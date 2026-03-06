@@ -10,12 +10,8 @@ describe("component", () => {
       expect(screen.getByRole("button")).toBeInTheDocument();
     });
 
-    it("should render correctly, asChild", () => {
-      render(
-        <Button asChild>
-          <a href="#">Hello, World!</a>
-        </Button>,
-      );
+    it("should render correctly, with render prop", () => {
+      render(<Button render={<a href="#" />}>Hello, World!</Button>);
 
       expect(screen.getByRole("link")).toBeInTheDocument();
     });

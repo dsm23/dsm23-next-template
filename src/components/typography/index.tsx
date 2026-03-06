@@ -1,6 +1,6 @@
-import { createElement } from "react";
 import type { FunctionComponent, HTMLAttributes, JSX } from "react";
-import { Slot } from "radix-ui";
+import { useRender } from "@base-ui/react";
+import type { UseRenderParameters } from "@base-ui/react";
 import { cn } from "~/utils/class-names";
 
 // Reusable helper to create components with consistent structure
@@ -10,20 +10,23 @@ const createComponent = <T extends HTMLElement>(
   displayName: string,
 ) => {
   type Props = HTMLAttributes<T> & {
-    asChild?: boolean;
+    render?: UseRenderParameters<
+      Record<string, unknown>,
+      HTMLElement,
+      true
+    >["render"];
   };
 
   const Component: FunctionComponent<Props> = ({
-    children,
     className,
-    asChild = false,
+    render,
     ...props
   }) => {
-    return createElement(
-      asChild ? Slot.Root : tag,
-      { ...props, className: cn(defaultClassName, className) },
-      children,
-    );
+    return useRender({
+      defaultTagName: tag,
+      render,
+      props: { ...props, className: cn(defaultClassName, className) },
+    });
   };
 
   Component.displayName = displayName;

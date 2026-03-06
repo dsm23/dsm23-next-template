@@ -21,16 +21,14 @@ describe("component", () => {
       );
     });
 
-    it("should render correctly, asChild, with various children", () => {
+    it("should render correctly, with render prop, with various children", () => {
       fc.assert(
         fc.property(fc.string(), fc.webUrl(), (linkText, href) => {
           const id = crypto.randomUUID();
 
           render(
-            <Button asChild>
-              <a href={href} data-testid={id}>
-                {linkText}
-              </a>
+            <Button render={<a href={href} data-testid={id} />}>
+              {linkText}
             </Button>,
           );
 

@@ -25,7 +25,7 @@ With this template, you get all the awesomeness you need:
 - **[Observability](https://opentelemetry.io/)** - Open Telemetry integration for seamless monitoring
 - **[Absolute imports](https://nextjs.org/docs/advanced-features/module-path-aliases)** - No more spaghetti imports
 - **[Health checks](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)** - Kubernetes-compatible for robust deployments
-- **[Radix UI](https://www.radix-ui.com/)** - Headless UI components for endless customization
+- **[Base UI](https://base-ui.com/)** - Headless UI components for endless customization
 - **[CVA](http://cva.style/)** - Create a consistent, reusable, and atomic design system
 - **[Renovate BOT](https://www.whitesourcesoftware.com/free-developer-tools/renovate)** - Auto-updating dependencies, so you can focus on coding
 - **Components coupling and cohesion graph** - A tool for managing component relationships
