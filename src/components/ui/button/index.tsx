@@ -1,7 +1,9 @@
-import type { ComponentProps } from "react";
+"use client";
+
+import type { FunctionComponent } from "react";
+import { Button as ButtonPrimitive } from "@base-ui/react/button";
 import { cva } from "class-variance-authority";
 import type { VariantProps } from "class-variance-authority";
-import { Slot } from "radix-ui";
 import { cn } from "~/utils/class-names";
 
 const buttonVariants = cva(
@@ -41,27 +43,14 @@ const buttonVariants = cva(
   },
 );
 
-const Button = ({
-  className,
-  variant = "default",
-  size = "default",
-  asChild = false,
-  ...props
-}: ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-  }) => {
-  const Comp = asChild ? Slot.Root : "button";
-
-  return (
-    <Comp
-      data-slot="button"
-      data-variant={variant}
-      data-size={size}
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    />
-  );
-};
+const Button: FunctionComponent<
+  ButtonPrimitive.Props & VariantProps<typeof buttonVariants>
+> = ({ className, variant = "default", size = "default", ...props }) => (
+  <ButtonPrimitive
+    data-slot="button"
+    className={cn(buttonVariants({ variant, size, className }))}
+    {...props}
+  />
+);
 
 export { Button, buttonVariants };

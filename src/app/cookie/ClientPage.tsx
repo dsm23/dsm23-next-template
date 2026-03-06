@@ -3,9 +3,7 @@ import { H2, H3, H4, Large, P } from "~/components/typography";
 const CookiePage = () => (
   <main className="container grid">
     <div className="cols-12 cols-m-8">
-      <H2 asChild>
-        <h1>Cookie Policy - CHANGE ALL OF THIS!!!!</h1>
-      </H2>
+      <H2 render={<h1 />}>Cookie Policy - CHANGE ALL OF THIS!!!!</H2>
       <P>Effective as of February 26, 2025.</P>
       <P>
         This cookie policy explains how Payload CMS, Inc. and our subsidiaries
@@ -32,9 +30,7 @@ const CookiePage = () => (
         a case, we may be unable to provide you with some of your desired
         content and services.
       </P>
-      <H3 asChild>
-        <h2>What is a cookie?</h2>
-      </H3>
+      <H3 render={<h2 />}>What is a cookie?</H3>
       <P>
         A cookie is a small piece of data that a website stores on your device
         when you visit. It typically contains information about the website
@@ -54,12 +50,8 @@ const CookiePage = () => (
         that use the same third-party service. We use third party cookies on our
         Sites.
       </P>
-      <H3 asChild>
-        <h2>Types of cookies and how we use them</h2>
-      </H3>
-      <H4 asChild>
-        <h3>Strictly necessary cookies</h3>
-      </H4>
+      <H3 render={<h2 />}>Types of cookies and how we use them</H3>
+      <H4 render={<h3 />}>Strictly necessary cookies</H4>
       <P>
         Strictly necessary cookies are crucial to your experience of a website,
         enabling core features like user logins, account management, shopping
@@ -70,9 +62,7 @@ const CookiePage = () => (
         We use strictly necessary cookies to enable certain functions on our
         Sites.
       </P>
-      <H4 asChild>
-        <h3>Performance cookies</h3>
-      </H4>
+      <H4 render={<h3 />}>Performance cookies</H4>
       <P>
         Performance cookies track how you use a website during your visit.
         Typically, this information is aggregated, with information tracked
@@ -84,9 +74,7 @@ const CookiePage = () => (
         services.
       </P>
       <P>We use performance cookies on our Sites.</P>
-      <H4 asChild>
-        <h3>Functional cookies</h3>
-      </H4>
+      <H4 render={<h3 />}>Functional cookies</H4>
       <P>
         Functional cookies are used to collect information about your device and
         any settings you may configure on the website you{"'"}re visiting (like
@@ -96,9 +84,7 @@ const CookiePage = () => (
         (first-party) or by third-party services.
       </P>
       <P>We use functional cookies for selected features on our Sites.</P>
-      <H4 asChild>
-        <h3>Targeting/advertising cookies</h3>
-      </H4>
+      <H4 render={<h3 />}>Targeting/advertising cookies</H4>
       <P>
         Targeting/advertising cookies help determine what promotional content is
         most relevant and appropriate to you and your interests. Websites may
@@ -111,11 +97,9 @@ const CookiePage = () => (
         same third-party service.
       </P>
       <P>We use targeting/advertising cookies on our Sites.</P>
-      <H4 asChild>
-        <h3>
-          What types of cookies and similar tracking technologies do we use on
-          the Sites?
-        </h3>
+      <H4 render={<h3 />}>
+        What types of cookies and similar tracking technologies do we use on the
+        Sites?
       </H4>
       <P>
         On the Sites, we use cookies and other tracking technologies described
@@ -255,17 +239,13 @@ const CookiePage = () => (
           </tbody>
         </table>
       </div>
-      <H4 asChild>
-        <h3>Other technologies</h3>
-      </H4>
+      <H4 render={<h3 />}>Other technologies</H4>
       <P>
         In addition to cookies, our Sites may use other technologies, such as
         Flash technology to pixel tags to collect information automatically.
       </P>
 
-      <Large asChild>
-        <h4>Browser Web Storage.</h4>
-      </Large>
+      <Large render={<h4 />}>Browser Web Storage.</Large>
       <P>
         We may use browser web storage (including via HTML5), also known as
         locally stored objects (“LSOs”), for similar purposes as cookies.
@@ -273,9 +253,7 @@ const CookiePage = () => (
         cookies. Your web browser may provide functionality to clear your
         browser web storage.
       </P>
-      <Large asChild>
-        <h4>Flash Technology.</h4>
-      </Large>
+      <Large render={<h4 />}>Flash Technology.</Large>
       <P>
         We may use Flash cookies (which are also known as Flash Local Shared
         Object (“Flash LSOs”)) on our Sites to collect and store information
@@ -290,9 +268,7 @@ const CookiePage = () => (
         of some Flash applications, including, potentially, Flash applications
         used in connection with our Sites.
       </P>
-      <Large asChild>
-        <h4>Web Beacons.</h4>
-      </Large>
+      <Large render={<h4 />}>Web Beacons.</Large>
       <P>
         We may also use web beacons (which are also known as pixel tags and
         clear GIFs) on our Sites and in our HTML formatted emails to track the
@@ -305,9 +281,7 @@ const CookiePage = () => (
         emails and to compile statistics about usage of the Sites, so that we
         can manage our content more effectively.
       </P>
-      <H4 asChild>
-        <h3>Your choices</h3>
-      </H4>
+      <H4 render={<h3 />}>Your choices</H4>
       <P>
         You can decide not to accept cookies or other technologies. If you do
         not accept our cookies or other technologies, you may experience some
@@ -315,9 +289,7 @@ const CookiePage = () => (
         to recognize your computer or mobile device and you may need to log in
         every time you visit our Sites.
       </P>
-      <Large asChild>
-        <h4>Cookie Preference Centre.</h4>
-      </Large>
+      <Large render={<h4 />}>Cookie Preference Centre.</Large>
       <P>
         You can change the cookie settings when you visit our Sites via our
         cookie banner that is displayed to you when you first visit our Sites,
@@ -334,9 +306,7 @@ const CookiePage = () => (
           button (i.e. “accept all”, “reject all” or “manage my settings”).
         </li>
       </ul>
-      <Large asChild>
-        <h4>Blocking cookies in your browser.</h4>
-      </Large>
+      <Large render={<h4 />}>Blocking cookies in your browser.</Large>
       <P>
         Most browsers let you remove or reject cookies. To do this, follow the
         instructions in your browser settings. Many browsers accept cookies by
@@ -366,25 +336,19 @@ const CookiePage = () => (
           </a>
         </li>
       </ul>
-      <Large asChild>
-        <h4>Blocking images/clear gifs.</h4>
-      </Large>
+      <Large render={<h4 />}>Blocking images/clear gifs.</Large>
       <P>
         Most browsers and devices allow you to configure your device to prevent
         images from loading. To do this, follow the instructions in your
         particular browser or device settings.
       </P>
-      <Large asChild>
-        <h4>Third-party opt-out option.</h4>
-      </Large>
+      <Large render={<h4 />}>Third-party opt-out option.</Large>
       <P>
         You can opt-out of interest-based advertising through some of the third
         parties listed in the chart above by using the corresponding third-party
         opt-out tool provided in the chart.
       </P>
-      <Large asChild>
-        <h4>Industry association opt-outs.</h4>
-      </Large>
+      <Large render={<h4 />}>Industry association opt-outs.</Large>
       <P>
         You may opt out of receiving interest-based advertising on websites
         through members of the Network Advertising Initiative by clicking{" "}
@@ -413,16 +377,12 @@ const CookiePage = () => (
         information, see our
         <a href="/privacy">Privacy Policy</a>.
       </P>
-      <H4 asChild>
-        <h3>Changes</h3>
-      </H4>
+      <H4 render={<h3 />}>Changes</H4>
       <P>
         Information about the cookies we use may be updated from time to time,
         so please check back on a regular basis for any changes.
       </P>
-      <H4 asChild>
-        <h3>Questions</h3>
-      </H4>
+      <H4 render={<h3 />}>Questions</H4>
       <P>
         If you have any questions about this cookie policy, please contact us by
         email at
@@ -430,9 +390,7 @@ const CookiePage = () => (
       </P>
     </div>
     <div className="cols-16 cols-m-8">
-      <Large asChild>
-        <h4>Cookie Preferences</h4>
-      </Large>
+      <Large render={<h4 />}>Cookie Preferences</Large>
       <P>
         The use of cookies is essential to provide you with the full
         functionality of our website. Your decision to either accept or decline
