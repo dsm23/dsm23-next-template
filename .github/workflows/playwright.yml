@@ -44,7 +44,9 @@ jobs:
     name: >
       test-shard (${{ matrix.shardIndex[1] <= matrix.shardTotal && 'dev' || 'prod' }}) -
       (${{ matrix.shardIndex[0] }}, ${{ matrix.shardTotal }})
-
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}-${{ matrix.shardIndex[1] }}
+      cancel-in-progress: true
     container:
       image: mcr.microsoft.com/playwright:v1.58.2@sha256:6446946a1d9fd62d9ae501312a2d76a43ee688542b21622056a372959b65d63d
       options: --user 1001
