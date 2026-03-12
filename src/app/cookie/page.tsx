@@ -1,6 +1,6 @@
 import type { FunctionComponent } from "react";
 import type { Metadata } from "next";
-import ClientPage from "./ClientPage";
+import ClientPage from "./client-page";
 
 export const metadata: Metadata = {
   description: "Cookie Policy",

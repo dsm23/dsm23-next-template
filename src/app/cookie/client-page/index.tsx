@@ -1,3 +1,6 @@
+/* oxlint-disable max-lines-per-function, jsx-a11y/anchor-ambiguous-text */
+
+import Link from "next/link";
 import { H2, H3, H4, Large, P } from "~/components/typography";
 
 const CookiePage = () => (
@@ -375,7 +378,7 @@ const CookiePage = () => (
       <P>
         For more information about how we collect, use and share your
         information, see our
-        <a href="/privacy">Privacy Policy</a>.
+        <Link href="/cookie">Privacy Policy</Link>.
       </P>
       <H4 render={<h3 />}>Changes</H4>
       <P>

@@ -54,7 +54,6 @@ storybook-static
 .env.production.local
 
 # Cache Files
-.eslintmdcache
 .stylelintcache
 
 # playwright

@@ -21,7 +21,7 @@ const meta = {
     defaultOpen: false,
     open: false,
     modal: true,
-    onOpenChange: fn(),
+    onOpenChange: fn<() => void>(),
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof DropdownMenu>;
