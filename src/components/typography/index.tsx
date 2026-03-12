@@ -34,6 +34,7 @@ const createComponent = <T extends HTMLElement>(
   return Component;
 };
 
+/** @knipignore */
 export const H1 = createComponent<HTMLHeadingElement>(
   "h1",
   "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
@@ -58,6 +59,7 @@ export const H4 = createComponent<HTMLHeadingElement>(
   "H4",
 );
 
+/** @knipignore */
 export const Lead = createComponent<HTMLParagraphElement>(
   "p",
   "text-xl text-muted-foreground",
@@ -76,36 +78,42 @@ export const Large = createComponent<HTMLDivElement>(
   "Large",
 );
 
+/** @knipignore */
 export const Small = createComponent<HTMLParagraphElement>(
   "p",
   "text-sm font-medium leading-none",
   "Small",
 );
 
+/** @knipignore */
 export const Muted = createComponent<HTMLSpanElement>(
   "span",
   "text-sm text-muted-foreground",
   "Muted",
 );
 
+/** @knipignore */
 export const InlineCode = createComponent<HTMLSpanElement>(
   "code",
   "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
   "InlineCode",
 );
 
+/** @knipignore */
 export const MultilineCode = createComponent<HTMLPreElement>(
   "pre",
   "relative rounded bg-muted p-4 font-mono text-sm font-semibold overflow-x-auto",
   "MultilineCode",
 );
 
+/** @knipignore */
 export const List = createComponent<HTMLUListElement>(
   "ul",
   "my-6 ml-6 list-disc [&>li]:mt-2",
   "List",
 );
 
+/** @knipignore */
 export const Quote = createComponent<HTMLQuoteElement>(
   "blockquote",
   "mt-6 border-l-2 pl-6 italic text-muted-foreground",
