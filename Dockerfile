@@ -10,7 +10,7 @@ FROM node:24.14.0-alpine@sha256:7fddd9ddeae8196abf4a3ef2de34e11f7b1a722119f91f28
 # Install dependencies only when needed
 FROM base AS deps
 
-# renovate: datasource=repology depName=alpine_3_22/gcompat versioning=loose
+# renovate: datasource=repology depName=alpine_3_23/gcompat versioning=loose
 ARG GCOMPAT_VERSION="1.1.0-r4"
 
 # Check https://github.com/nodejs/docker-node/tree/4adafb930bf239b610fa37c4f691bbf98dd65578#nodealpine to understand why gcompat might be needed.
@@ -49,6 +49,9 @@ ENV NODE_ENV=production
 
 RUN addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 nextjs
+
+RUN mkdir .next \
+  && chown nextjs:nodejs .next
 
 # COPY --from=builder /app/public ./public
 

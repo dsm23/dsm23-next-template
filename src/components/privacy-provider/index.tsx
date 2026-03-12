@@ -5,6 +5,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from "react";
 import type { FunctionComponent, ReactNode } from "react";
@@ -16,10 +17,12 @@ type Privacy = {
   updateCookieConsent: (accepted: boolean) => void;
 };
 
+const noop = () => {};
+
 const Context = createContext<Privacy>({
   cookieConsent: undefined,
   showConsent: undefined,
-  updateCookieConsent: () => false,
+  updateCookieConsent: noop,
 });
 
 type CookieConsent = {
@@ -58,7 +61,6 @@ const PrivacyProvider: FunctionComponent<{ children: ReactNode }> = ({
       const consent = getLocaleStorage();
 
       if (consent) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCookieConsent(consent.accepted || false);
         return;
       }
@@ -70,13 +72,12 @@ const PrivacyProvider: FunctionComponent<{ children: ReactNode }> = ({
     }
   }, [updateCookieConsent]);
 
-  return (
-    <Context.Provider
-      value={{ cookieConsent, showConsent, updateCookieConsent }}
-    >
-      {children}
-    </Context.Provider>
+  const value = useMemo(
+    () => ({ cookieConsent, showConsent, updateCookieConsent }),
+    [cookieConsent, showConsent, updateCookieConsent],
   );
+
+  return <Context.Provider value={value}>{children}</Context.Provider>;
 };
 
 const usePrivacy = (): Privacy => useContext(Context);

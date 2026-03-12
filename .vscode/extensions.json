@@ -2,7 +2,6 @@
   "recommendations": [
     "bbenoist.nix",
     "bradlc.vscode-tailwindcss",
-    "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "exiasr.hadolint",
     "jasonnutter.vscode-codeowners",
