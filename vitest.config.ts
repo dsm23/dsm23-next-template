@@ -11,8 +11,11 @@ export default defineConfig({
   },
   plugins: [react()],
   test: {
-    globals: false,
+    expect: {
+      requireAssertions: true,
+    },
     environment: "jsdom",
+    globals: false,
     setupFiles: "./test-utils/vitest.setup.ts",
     coverage: {
       include: ["src/**/*.[jt]s?(x)"],
@@ -30,6 +33,7 @@ export default defineConfig({
         test: {
           name: "unit",
           include: ["src/**/?(*.)+(spec|test).[jt]s?(x)"],
+          logHeapUsage: true,
         },
       },
       {
