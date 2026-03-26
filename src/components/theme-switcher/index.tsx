@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Laptop, Moon, Sun } from "lucide-react";
-import { Button } from "~/components/ui/button";
+import { buttonVariants } from "~/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
 import useMounted from "~/hooks/use-mounted";
+import { cn } from "~/utils/class-names";
 
 const ThemeSwitcher = () => {
   const mounted = useMounted();
@@ -22,7 +23,9 @@ const ThemeSwitcher = () => {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger render={<Button variant="ghost" size="sm" />}>
+      <DropdownMenuTrigger
+        className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+      >
         <span className="sr-only">Theme switcher</span>
         {theme === "light" ? (
           <Sun key="light" className="size-4 text-muted-foreground" />

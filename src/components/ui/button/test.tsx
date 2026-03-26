@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { Button } from ".";
+import { Button, buttonVariants } from ".";
 
 describe("component", () => {
   describe("Button", () => {
@@ -11,7 +11,11 @@ describe("component", () => {
     });
 
     it("should render correctly, with render prop", () => {
-      render(<Button render={<a href="#" />}>Hello, World!</Button>);
+      render(
+        <a href="#" className={buttonVariants()}>
+          Hello, World!
+        </a>,
+      );
 
       expect(screen.getByRole("link")).toBeInTheDocument();
     });
