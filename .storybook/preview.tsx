@@ -1,8 +1,19 @@
 import type { Preview } from "@storybook/nextjs-vite";
+import { Inter } from "next/font/google";
 
 import "~/styles/tailwind.css";
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+
 const preview: Preview = {
+  decorators: [
+    (Story) => (
+      <div className={inter.className}>
+        <Story />
+      </div>
+    ),
+  ],
+
   parameters: {
     controls: {
       matchers: {

@@ -1,6 +1,6 @@
 import type { FunctionComponent } from "react";
 import type { Metadata } from "next";
-import { Button } from "~/components/ui/button";
+import { buttonVariants } from "~/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Next.js Enterprise Boilerplate",
@@ -469,24 +469,22 @@ const HomePage: FunctionComponent<PageProps<"/">> = () => (
             development, AI-powered code reviews, and an extensive suite of
             tools for a smooth and enjoyable development process.
           </p>
-          <Button
-            className="mr-3"
-            nativeButton={false}
-            size="lg"
-            render={<a href="https://github.com/dsm23/dsm23-next-template" />}
+          <a
+            href="https://github.com/dsm23/dsm23-next-template"
+            className={buttonVariants({ className: "mr-3", size: "lg" })}
           >
             Get started
-          </Button>
-          <Button
-            variant="outline"
-            nativeButton={false}
-            size="lg"
-            render={
-              <a href="https://vercel.com/new/git/external?repository-url=https://github.com/dsm23/dsm23-next-template/" />
-            }
+          </a>
+          <a
+            href="https://vercel.com/new/git/external?repository-url=https://github.com/dsm23/dsm23-next-template/"
+            className={buttonVariants({
+              className: "mr-3",
+              size: "lg",
+              variant: "outline",
+            })}
           >
             Deploy Now
-          </Button>
+          </a>
         </div>
       </div>
     </section>
