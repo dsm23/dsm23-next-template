@@ -1,4 +1,4 @@
-/* oxlint-disable no-deprecated, prefer-optional-chain, unbound-method */
+/* oxlint-disable no-deprecated, prefer-optional-chain, unbound-method, typescript/no-unnecessary-condition */
 
 const canUseDom = Boolean(
   typeof window !== "undefined" &&
