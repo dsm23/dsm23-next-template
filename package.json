@@ -49,7 +49,7 @@
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-conventional": "20.5.0",
     "@commitlint/types": "20.5.0",
-    "@fast-check/vitest": "0.3.0",
+    "@fast-check/vitest": "0.4.0",
     "@playwright/test": "1.59.1",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "13.0.1",
