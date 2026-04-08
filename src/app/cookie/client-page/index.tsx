@@ -4,8 +4,8 @@ import Link from "next/link";
 import { H2, H3, H4, Large, P } from "~/components/typography";
 
 const CookiePage = () => (
-  <main className="container grid">
-    <div className="cols-12 cols-m-8">
+  <main className="mx-auto grid max-w-6xl px-4 py-16">
+    <div className="space-y-4">
       <H2 render={<h1 />}>Cookie Policy - CHANGE ALL OF THIS!!!!</H2>
       <P>Effective as of February 26, 2025.</P>
       <P>
@@ -392,7 +392,7 @@ const CookiePage = () => (
         <a href="mailto:info@payloadcms.com">info@payloadcms.com</a>.
       </P>
     </div>
-    <div className="cols-16 cols-m-8">
+    <div className="mt-20">
       <Large render={<h4 />}>Cookie Preferences</Large>
       <P>
         The use of cookies is essential to provide you with the full

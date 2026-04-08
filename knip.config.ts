@@ -6,9 +6,8 @@ const config: KnipConfig = {
   ignoreDependencies: [
     "import-in-the-middle",
     "require-in-the-middle",
-    "eslint-plugin-react-dom",
     "eslint-plugin-storybook",
-    "eslint-plugin-tailwind-canonical-classes",
+    "eslint-plugin-better-tailwindcss",
     // TODO: update this after implementing semantic-release propertly
     // https://github.com/webpro-nl/knip/blob/main/packages/knip/src/plugins/semantic-release/index.ts
     "@semantic-release/commit-analyzer",
