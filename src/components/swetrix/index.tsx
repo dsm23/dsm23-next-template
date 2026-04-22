@@ -4,14 +4,21 @@ import { useEffect } from "react";
 import type { FunctionComponent } from "react";
 import { init, trackViews, trackErrors } from "swetrix";
 
-const Swetrix: FunctionComponent = () => {
+type Props = {
+  apiURL: string;
+  projectId: string;
+};
+
+const Swetrix: FunctionComponent<Props> = ({ apiURL, projectId }) => {
   useEffect(() => {
-    init(process.env.NEXT_PUBLIC_SWETRIX_PROJECT_ID, {
-      apiURL: process.env.NEXT_PUBLIC_SWETRIX_API_URL,
+    init(projectId, {
+      devMode: true,
+      apiURL,
     });
 
     void trackViews();
     trackErrors();
+    // oxlint-disable-next-line react/exhaustive-deps
   }, []);
 
   return (
