@@ -31,7 +31,10 @@ const RootLayout: FunctionComponent<LayoutProps<"/">> = async ({
           inter.variable,
         )}
       >
-        <Swetrix />
+        <Swetrix
+          apiURL={process.env.SWETRIX_API_URL}
+          projectId={process.env.SWETRIX_PROJECT_ID}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
