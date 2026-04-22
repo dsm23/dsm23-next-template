@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { headers } from "next/headers";
 import { PrivacyBanner } from "~/components/privacy-banner";
 import { PrivacyProvider } from "~/components/privacy-provider";
+import Swetrix from "~/components/swetrix";
 import { ThemeProvider } from "~/components/theme-provider";
 import { ThemeSwitcher } from "~/components/theme-switcher";
 import { cn } from "~/utils/class-names";
@@ -30,6 +31,7 @@ const RootLayout: FunctionComponent<LayoutProps<"/">> = async ({
           inter.variable,
         )}
       >
+        <Swetrix />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

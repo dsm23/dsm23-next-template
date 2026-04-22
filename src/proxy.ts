@@ -17,6 +17,7 @@ export function proxy(request: NextRequest) {
         : "'unsafe-inline'"
     };
     img-src 'self' blob: data:;
+    connect-src 'self' ${process.env.NEXT_PUBLIC_SWETRIX_API_URL};
     font-src 'self';
     object-src 'none';
     base-uri 'self';
