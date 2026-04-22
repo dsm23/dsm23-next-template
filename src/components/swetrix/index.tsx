@@ -12,7 +12,6 @@ type Props = {
 const Swetrix: FunctionComponent<Props> = ({ apiURL, projectId }) => {
   useEffect(() => {
     init(projectId, {
-      devMode: true,
       apiURL,
     });
 
@@ -25,7 +24,7 @@ const Swetrix: FunctionComponent<Props> = ({ apiURL, projectId }) => {
     <noscript>
       {/* oxlint-disable-next-line next/no-img-element */}
       <img
-        src={`${process.env.NEXT_PUBLIC_SWETRIX_API_URL}/noscript?pid=${process.env.NEXT_PUBLIC_SWETRIX_PROJECT_ID}`}
+        src={`${apiURL}/log/noscript?pid=${projectId}`}
         alt=""
         referrerPolicy="no-referrer-when-downgrade"
       />

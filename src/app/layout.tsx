@@ -32,7 +32,7 @@ const RootLayout: FunctionComponent<LayoutProps<"/">> = async ({
         )}
       >
         <Swetrix
-          apiURL={process.env.SWETRIX_API_URL}
+          apiURL={`${process.env.SWETRIX_API_URL}/log`}
           projectId={process.env.SWETRIX_PROJECT_ID}
         />
         <ThemeProvider
