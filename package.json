@@ -21,7 +21,7 @@
     "coupling-graph": "pnpm dlx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
   },
   "dependencies": {
-    "@base-ui/react": "1.4.0",
+    "@base-ui/react": "1.4.1",
     "@opentelemetry/api-logs": "0.215.0",
     "@opentelemetry/exporter-trace-otlp-http": "0.215.0",
     "@opentelemetry/instrumentation": "0.215.0",
