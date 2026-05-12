@@ -145,6 +145,7 @@ export default defineConfig({
         case: "camelCase",
       },
     ],
+    "unicorn/no-negated-condition": "off",
     "vitest/consistent-vitest-vi": "warn",
     "vitest/no-conditional-expect": "off",
     "vitest/no-conditional-in-test": "off",
