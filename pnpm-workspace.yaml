@@ -7,10 +7,10 @@ allowBuilds:
 
 # enableGlobalVirtualStore: true
 
+hoistPattern: []
+
 # Only install package versions published at least 3 days ago
 minimumReleaseAge: 4320
-
-resolutionMode: lowest-direct
 
 savePrefix: ""
 
