@@ -15,7 +15,7 @@ permissions: {}
 
 jobs:
   link-checker:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     permissions:
       # required for peter-evans/create-issue-from-file
       issues: write
