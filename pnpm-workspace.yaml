@@ -15,8 +15,3 @@ minimumReleaseAge: 4320
 savePrefix: ""
 
 sideEffectsCache: false
-
-trustPolicy: no-downgrade
-
-# 7 days
-trustPolicyIgnoreAfter: 10080
