@@ -4,7 +4,7 @@ FROM ghcr.io/pnpm/pnpm:11.5.0@sha256:7fff553e90f47a1792fb099b69732b04edb936d1b68
 FROM dhi.io/node:26.1.0-alpine3.23@sha256:89ba306d54a9025da2e7862ff22ae13a95d825a0e459217138242115dfc700a5 AS runtime
 
 # renovate: datasource=docker depName=dhi.io/node
-ARG NODE_VERSION="26.1.0"
+ARG NODE_VERSION="26.2.0"
 
 # Stage 1: Install dependencies only when needed
 FROM base AS deps
