@@ -40,15 +40,15 @@
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "require-in-the-middle": "8.0.1",
-    "shadcn": "4.8.2",
+    "shadcn": "4.8.3",
     "swetrix": "4.2.0",
     "tailwind-merge": "3.6.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.11.3",
     "@chromatic-com/storybook": "5.2.1",
-    "@commitlint/cli": "21.0.1",
-    "@commitlint/config-conventional": "21.0.1",
+    "@commitlint/cli": "21.0.2",
+    "@commitlint/config-conventional": "21.0.2",
     "@commitlint/types": "21.0.1",
     "@fast-check/vitest": "0.4.1",
     "@playwright/test": "1.60.0",
@@ -79,7 +79,7 @@
     "eslint-plugin-storybook": "10.4.1",
     "jsdom": "29.1.1",
     "knip": "6.14.2",
-    "lefthook": "2.1.8",
+    "lefthook": "2.1.9",
     "npm-run-all2": "9.0.1",
     "oxfmt": "0.52.0",
     "oxlint": "1.67.0",
@@ -100,5 +100,5 @@
   "engines": {
     "node": ">=26.0.0"
   },
-  "packageManager": "pnpm@11.4.0+sha512.f0febc7e37552ab485494a914241b338e0b3580b93d54ce31f00933015880863129038a1b4ae4e414a0ee63ac35bf21197e990172c4a68256450b5636310968f"
+  "packageManager": "pnpm@11.5.0+sha512.dbfcc4f81cf48597afd4bc391ffdf12c11f1a9fb83a395bfa6b0a2d9cc2fd8ffebafdb1ccbd529632153f793904c2615b7f09fe1a345473fd1c35845172a8eb1"
 }
