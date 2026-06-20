@@ -38,6 +38,7 @@ jobs:
 
       - name: Unit & Integration tests
         run: >
+          devbox run
           pnpm exec vitest run
           --project unit
           --reporter blob
@@ -91,6 +92,7 @@ jobs:
 
       - name: Merge reports
         run: >
+          devbox run
           pnpm exec vitest
           --coverage.enabled
           --coverage.reporter=json

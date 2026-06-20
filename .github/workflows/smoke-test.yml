@@ -30,6 +30,8 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Smoke & Acceptance tests
-        run: pnpm exec vitest run --project storybook
+        run: >
+          devbox run
+          pnpm exec vitest run --project storybook
         env:
           FORCE_COLOR: "1"

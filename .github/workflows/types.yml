@@ -32,4 +32,6 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Types check
-        run: pnpm run check-types
+        run: >
+          devbox run
+          pnpm run check-types
