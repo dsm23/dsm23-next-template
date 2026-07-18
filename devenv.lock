@@ -1,0 +1,62 @@
+{
+  "nodes": {
+    "devenv": {
+      "locked": {
+        "dir": "src/modules",
+        "lastModified": 1782153911,
+        "narHash": "sha256-Z7BG4cSJX1ybJeZztEMV8WlE6GrXJsSd34x9eHvpzU8=",
+        "owner": "cachix",
+        "repo": "devenv",
+        "rev": "d894e487bb23ed87e0555d2158710844bde65322",
+        "type": "github"
+      },
+      "original": {
+        "dir": "src/modules",
+        "owner": "cachix",
+        "repo": "devenv",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1784280462,
+        "narHash": "sha256-DtoqIqM7VkR6NxAkcLpMwmi02USwWb3JdmNGLyhthc0=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "293d6abedf0478e681a4dfcfcb35b30fc796a32f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-playwright": {
+      "locked": {
+        "lastModified": 1783079170,
+        "narHash": "sha256-Iwqi/HUUut0bmViXcTIlD00Ae7uUk1LzNUD/Xfkz8nI=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f2676046a1cba86d6f86a64f5b6d427b2f4dec96",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f2676046a1cba86d6f86a64f5b6d427b2f4dec96",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "devenv": "devenv",
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-playwright": "nixpkgs-playwright"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -38,6 +38,14 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# devenv
+.devenv/
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv/
+
 # docker compose
 compose.override.yaml
 compose.override.yml

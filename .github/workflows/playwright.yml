@@ -47,9 +47,6 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}-${{ matrix.shardIndex[1] }}
       cancel-in-progress: true
-    container:
-      image: mcr.microsoft.com/playwright:v1.60.0@sha256:9bd26ad900bb5e0f4dee75839e957a89ae89c2b7ab1e76050e559790e946b948
-      options: --user 1001
     steps:
       - name: Git Checkout
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
@@ -61,12 +58,14 @@ jobs:
 
       - name: Run Playwright tests (dev)
         if: ${{ matrix.shardIndex[1] <= matrix.shardTotal }}
+        shell: devenv shell bash -- -e {0}
         run: >
           pnpm exec playwright test
           --shard=${{ matrix.shardIndex[0] }}/${{ matrix.shardTotal }}
 
       - name: Run Playwright tests (prod)
         if: ${{ matrix.shardIndex[1] > matrix.shardTotal }}
+        shell: devenv shell bash -- -e {0}
         run: >
           pnpm exec playwright test
           --config playwright.prod.config.ts
@@ -109,6 +108,7 @@ jobs:
           merge-multiple: true
 
       - name: Merge into HTML Report
+        shell: devenv shell bash -- -e {0}
         run: pnpm exec playwright merge-reports --reporter html ./all-blob-reports
 
       - name: Upload HTML report
