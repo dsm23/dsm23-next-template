@@ -84,7 +84,7 @@
     "oxfmt": "0.54.0",
     "oxlint": "1.69.0",
     "oxlint-tsgolint": "0.23.0",
-    "postcss": "8.5.15",
+    "postcss": "8.5.23",
     "semantic-release": "25.0.5",
     "storybook": "10.4.4",
     "stylelint": "17.13.0",
